@@ -1,0 +1,33 @@
+/*
+
+0 - 600px Phone
+600 - 900px Table Portrait
+900 - 1200px Tablet Landscape
+[1200 - 1800] - Where normal styles apply
+
+1800px + : Big Desktop
+
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
