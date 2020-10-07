@@ -1,1 +1,1 @@
-# [Miravicson.io](https://www.miravicson.netlify.com)
+# [Miravicson.io](www.miravicson.netlify.com)
