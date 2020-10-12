@@ -1,0 +1,27 @@
+
+.header {
+  min-height: 100vh;
+  background-color: darken($color-primary-dark, 10%);
+
+
+  display: flex;
+
+  &__text {
+    flex: 0 0 50%;
+    align-self: center;
+  }
+
+  &__img {
+  background: linear-gradient(to right, rgba(darken($color-primary-dark, 10%), 1), transparent),
+  url(../img/background3.jpg);
+  background-size: cover;
+  background-position: 60% 0%;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-clip: padding-box ;
+  flex: 1;
+  clip-path: circle(68.7% at 12% 49%);
+
+  }
+
+}

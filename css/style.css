@@ -16,9 +16,9 @@ $breakpoint argument choices
 ORDER: Base + typography > general layout + grid > page layout > components
 */
 :root {
-  --color-primary: #eb2f64;
-  --color-primary-light: #FF3366;
-  --color-primary-dark: #BA265D;
+  --color-primary: #87431d;
+  --color-primary-light: #c87941;
+  --color-primary-dark: #290001;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
@@ -39,7 +39,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  min-height: 3000vh; }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -53,7 +54,7 @@ body {
 
 .heading-1 {
   font-size: 4.5rem;
-  color: #5643fa; }
+  color: #f7f7f7; }
 
 .u-center-text {
   text-align: center !important; }
@@ -87,3 +88,24 @@ body {
 
 .u-margin-top-small {
   margin-top: 1.5rem !important; }
+
+.transparent {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem; }
+
+.header {
+  min-height: 100vh;
+  background-color: black;
+  display: flex; }
+  .header__text {
+    flex: 0 0 50%;
+    align-self: center; }
+  .header__img {
+    background: linear-gradient(to right, black, transparent), url(../img/background3.jpg);
+    background-size: cover;
+    background-position: 60% 0%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-clip: padding-box;
+    flex: 1;
+    clip-path: circle(68.7% at 12% 49%); }
