@@ -1,4 +1,12 @@
+.home {
+  height: 100%;
+  min-width: 100%;
+}
 
-
-body {
+.introduction {
+  @include center-vertically;
+  padding: 4rem;
+  font-size: $large-font-size;
+  letter-spacing: 0.05rem;
+  line-height: 1.1;
 }

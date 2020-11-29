@@ -6,10 +6,19 @@
   box-sizing: inherit;
 }
 
-
-
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px; 10px / 16px = 62.5%
-  min-height: 3000vh;
+  @include respond(big-desktop) {
+    font-size: 80%;
+  }
+  @include respond(tab-land) {
+  }
+  @include respond(tab-port) {
+  }
+  @include respond(phone) {
+  }
+  @include respond(small-phone) {
+  }
 }
+

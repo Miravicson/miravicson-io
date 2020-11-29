@@ -2,7 +2,8 @@ body {
   font-family: $font-primary;
   font-weight: 400;
   line-height: 1.7;
-  color: $color-grey-dark;
+  color: $color-primary-dark;
+  font-size: $default-font-size;
 }
 
 %heading {
@@ -13,5 +14,4 @@ body {
 .heading-1 {
   @extend %heading;
   font-size: 4.5rem;
-  color: $color-grey-light-1;
 }

@@ -15,21 +15,6 @@ $breakpoint argument choices
 
 ORDER: Base + typography > general layout + grid > page layout > components
 */
-:root {
-  --color-primary: #87431d;
-  --color-primary-light: #c87941;
-  --color-primary-dark: #290001;
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
-  --color-grey-light-3: #f0eeee;
-  --color-grey-light-4: #ccc;
-  --color-grey-dark-1: #333;
-  --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
-  --line: 1px solid var(--color-grey-light-2); }
-
 *,
 *::after,
 *::before {
@@ -39,22 +24,24 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-  min-height: 3000vh; }
+  font-size: 62.5%; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "EB Garamond", serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777; }
+  color: #212121;
+  font-size: 1.4rem; }
 
 .heading-1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
 .heading-1 {
-  font-size: 4.5rem;
-  color: #f7f7f7; }
+  font-size: 4.5rem; }
 
 .u-center-text {
   text-align: center !important; }
@@ -93,19 +80,74 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 1.5rem; }
 
+.container {
+  display: grid;
+  grid-template-columns: 10rem auto 10rem;
+  grid-template-rows: 100vh;
+  height: 100vh; }
+
+.layout {
+  height: 100%;
+  grid-column: 2 / span 1; }
+
+.logo__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0; }
+
+.logo__picture {
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: 50% 30%; }
+
 .header {
-  min-height: 100vh;
-  background-color: black;
-  display: flex; }
-  .header__text {
-    flex: 0 0 50%;
-    align-self: center; }
-  .header__img {
-    background: linear-gradient(to right, black, transparent), url(../img/background3.jpg);
-    background-size: cover;
-    background-position: 60% 0%;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    background-clip: padding-box;
-    flex: 1;
-    clip-path: circle(68.7% at 12% 49%); }
+  border-right: 1px solid #777;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  position: fixed;
+  height: 100%; }
+  .header__description {
+    text-align: center;
+    line-height: 1.2;
+    width: 80%;
+    font-size: 1.4rem; }
+  .header .nav {
+    padding-top: 1.5rem; }
+    .header .nav__list {
+      padding: 0; }
+    .header .nav__listitem {
+      list-style: none; }
+    .header .nav__link {
+      text-decoration: none; }
+  .header__footer {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    margin-top: auto;
+    border-top: 1px solid #777;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 100; }
+
+.main {
+  position: relative;
+  margin-left: 20rem;
+  min-height: 100%; }
+
+.home {
+  height: 100%;
+  min-width: 100%; }
+
+.introduction {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 4rem;
+  font-size: 6rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.1; }
