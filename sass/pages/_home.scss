@@ -5,8 +5,11 @@
 
 .introduction {
   @include center-vertically;
+  p + p {
+    margin-top: 3rem;
+  }
   padding: 4rem;
   font-size: $large-font-size;
   letter-spacing: 0.05rem;
-  line-height: 1.1;
+  line-height: 1;
 }

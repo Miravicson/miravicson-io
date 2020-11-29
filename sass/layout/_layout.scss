@@ -3,14 +3,101 @@
   grid-template-columns: 10rem auto 10rem;
   grid-template-rows: 100vh;
   height: 100vh;
+
+  @include respond(tab-land) {
+    grid-template-columns: 0rem auto 5rem;
+  }
+  @include respond(tab-port) {
+    grid-template-columns: auto;
+  }
 }
 
 .layout {
   height: 100%;
   grid-column: 2 / span 1;
+  @include respond(tab-port) {
+    grid-column: 1 / span 1;
+  }
+}
+.toggler {
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    display: none;
+  }
+  @include respond(tab-port) {
+    &__button {
+      height: 7rem;
+      width: 7rem;
+      text-align: center;
+      cursor: pointer;
+      position: fixed;
+      z-index: $highest-z-index;
+      top: 1rem;
+      right: 1rem;
+      display: initial;
+    }
+    &__icon {
+      position: relative;
+      margin-top: 3.5rem;
+      transition: all 0.2s;
+
+      &,
+      &::before,
+      &::after {
+        width: 3rem;
+        height: 2px;
+        background-color: $color-black;
+        display: inline-block;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: -0.8rem;
+      }
+
+      &::after {
+        top: 0.8rem;
+      }
+    }
+    &__button:hover &__icon::before {
+      transform: translateY(-0.2rem);
+    }
+
+    &__button:hover &__icon::after {
+      transform: translateY(0.2rem);
+    }
+
+    &__checkbox:checked + &__button &__icon {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(135deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(-135deg);
+        top: 0;
+      }
+    }
+
+    &__checkbox:checked ~ .header__container {
+      transform: scale(1);
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
-.logo {
+.profile {
   &__container {
     width: 100%;
     display: flex;
@@ -28,21 +115,39 @@
 }
 
 .header {
-  border-right: 1px solid $color-grey-dark;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 20rem;
-  position: fixed;
   height: 100%;
-  
+  position: fixed;
+  &__container {
+    transition: all 0.2s;
+    border-right: 1px solid $color-grey-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    position: fixed;
+    height: 100%;
+    z-index: $high-z-index;
+    background-color: $color-white;
+  }
 
+  @include respond(tab-port) {
+    z-index: $highest-z-index;
+    &__container {
+      padding-top: 2rem;
+      width: 0;
+      height: 0;
+      justify-content: flex-start;
+      border: none;
+      transform: scale(0);
+    }
+  }
 
   &__description {
     text-align: center;
     line-height: 1.2;
     width: 80%;
     font-size: $default-font-size;
+    padding: 2rem 0;
   }
 
   .nav {
@@ -69,13 +174,17 @@
 
   &__footer {
     font-size: $small-font-size;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     margin-top: auto;
     border-top: 1px solid $color-grey-dark;
     width: 100%;
     display: flex;
     justify-content: center;
     font-weight: 100;
+
+    @include respond(tab-port) {
+      // display: none;
+    }
   }
 }
 
@@ -83,4 +192,8 @@
   position: relative;
   margin-left: 20rem; // The width of the sidebar
   min-height: 100%;
+
+  @include respond(tab-port) {
+    margin-left: 0;
+  }
 }

@@ -85,18 +85,78 @@ body {
   grid-template-columns: 10rem auto 10rem;
   grid-template-rows: 100vh;
   height: 100vh; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      grid-template-columns: 0rem auto 5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      grid-template-columns: auto; } }
 
 .layout {
   height: 100%;
   grid-column: 2 / span 1; }
+  @media only screen and (max-width: 56.25em) {
+    .layout {
+      grid-column: 1 / span 1; } }
 
-.logo__container {
+.toggler__checkbox {
+  display: none; }
+
+.toggler__button {
+  display: none; }
+
+@media only screen and (max-width: 56.25em) {
+  .toggler__button {
+    height: 7rem;
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+    top: 1rem;
+    right: 1rem;
+    display: initial; }
+  .toggler__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    transition: all 0.2s; }
+    .toggler__icon, .toggler__icon::before, .toggler__icon::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #000;
+      display: inline-block; }
+    .toggler__icon::before, .toggler__icon::after {
+      content: "";
+      position: absolute;
+      left: 0; }
+    .toggler__icon::before {
+      top: -0.8rem; }
+    .toggler__icon::after {
+      top: 0.8rem; }
+  .toggler__button:hover .toggler__icon::before {
+    transform: translateY(-0.2rem); }
+  .toggler__button:hover .toggler__icon::after {
+    transform: translateY(0.2rem); }
+  .toggler__checkbox:checked + .toggler__button .toggler__icon {
+    background-color: transparent; }
+    .toggler__checkbox:checked + .toggler__button .toggler__icon::before {
+      transform: rotate(135deg);
+      top: 0; }
+    .toggler__checkbox:checked + .toggler__button .toggler__icon::after {
+      transform: rotate(-135deg);
+      top: 0; }
+  .toggler__checkbox:checked ~ .header__container {
+    transform: scale(1);
+    width: 100%;
+    height: 100%; } }
+
+.profile__container {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 1.5rem 0; }
 
-.logo__picture {
+.profile__picture {
   height: 10rem;
   width: 10rem;
   object-fit: cover;
@@ -104,18 +164,35 @@ body {
   object-position: 50% 30%; }
 
 .header {
-  border-right: 1px solid #777;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 20rem;
-  position: fixed;
-  height: 100%; }
+  height: 100%;
+  position: fixed; }
+  .header__container {
+    transition: all 0.2s;
+    border-right: 1px solid #777;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    position: fixed;
+    height: 100%;
+    z-index: 500;
+    background-color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      z-index: 1000; }
+      .header__container {
+        padding-top: 2rem;
+        width: 0;
+        height: 0;
+        justify-content: flex-start;
+        border: none;
+        transform: scale(0); } }
   .header__description {
     text-align: center;
     line-height: 1.2;
     width: 80%;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    padding: 2rem 0; }
   .header .nav {
     padding-top: 1.5rem; }
     .header .nav__list {
@@ -126,7 +203,7 @@ body {
       text-decoration: none; }
   .header__footer {
     font-size: 1.2rem;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     margin-top: auto;
     border-top: 1px solid #777;
     width: 100%;
@@ -138,6 +215,9 @@ body {
   position: relative;
   margin-left: 20rem;
   min-height: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .main {
+      margin-left: 0; } }
 
 .home {
   height: 100%;
@@ -150,4 +230,6 @@ body {
   padding: 4rem;
   font-size: 6rem;
   letter-spacing: 0.05rem;
-  line-height: 1.1; }
+  line-height: 1; }
+  .introduction p + p {
+    margin-top: 3rem; }
