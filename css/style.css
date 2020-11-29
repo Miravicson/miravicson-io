@@ -28,6 +28,15 @@ html {
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 80%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 40%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   font-family: "EB Garamond", serif;
@@ -75,6 +84,34 @@ body {
 
 .u-margin-top-small {
   margin-top: 1.5rem !important; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .transparent {
   background-color: rgba(255, 255, 255, 0.1);
@@ -233,3 +270,24 @@ body {
   line-height: 1; }
   .introduction p + p {
     margin-top: 3rem; }
+  .introduction p:nth-child(1) {
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: 0.5s; }
+  .introduction p:nth-child(2) {
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: backwards; }
+  .introduction p:nth-child(n + 3) {
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards; }
+  @media only screen and (min-width: 112.5em) {
+    .introduction {
+      font-size: 4rem; } }

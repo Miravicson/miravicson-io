@@ -13,12 +13,14 @@ html {
     font-size: 80%;
   }
   @include respond(tab-land) {
+    font-size: 50%; // 1rem = 8px;
   }
   @include respond(tab-port) {
+    font-size: 40%; // 1rem = 6.5px;
   }
   @include respond(phone) {
+    font-size: 37.5%; // 1rem = 6px;
   }
   @include respond(small-phone) {
   }
 }
-
