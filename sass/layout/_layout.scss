@@ -93,6 +93,7 @@
       transform: scale(1);
       width: 100%;
       height: 100%;
+      opacity: 1;
     }
   }
 }
@@ -132,13 +133,17 @@
 
   @include respond(tab-port) {
     z-index: $highest-z-index;
+    width: 100vh;
     &__container {
-      padding-top: 2rem;
+      transition: all 0.25s ease-in-out;
+      padding-top: 10rem;
       width: 0;
       height: 0;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: center;
       border: none;
       transform: scale(0);
+      opacity: 0;
     }
   }
 
@@ -148,26 +153,51 @@
     width: 80%;
     font-size: $default-font-size;
     padding: 2rem 0;
+
+    @include respond(tab-port) {
+      font-size: $medium-font-size;
+    }
   }
 
   .nav {
     padding-top: 1.5rem;
+    @include respond(tab-port) {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch;
+    }
     &__list {
       padding: 0;
+      text-align: center;
     }
-    &__listitem {
+    &__item {
       list-style: none;
+      @include respond(tab-port) {
+        padding: 2rem;
+      }
     }
 
     &__link {
       text-decoration: none;
-      &:link {
-      }
-      &:hover {
-      }
-      &:active {
-      }
+      font-family: $font-primary;
+      &:link,
       &:visited {
+        color: $color-black;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.04rem;
+        font-size: $medium-font-size;
+
+        @include respond(tab-port) {
+          font-size: $big-font-size;
+        }
+      }
+      &:hover,
+      &:active {
+        color: $color-tertiary-light;
       }
     }
   }

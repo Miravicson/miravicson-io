@@ -5,6 +5,7 @@
 
 .introduction {
   @include center-vertically;
+  font-family: $font-primary;
   p + p {
     margin-top: 3rem;
   }
