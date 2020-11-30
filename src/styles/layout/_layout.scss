@@ -98,27 +98,11 @@
   }
 }
 
-.profile {
-  &__container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1.5rem 0;
-  }
-
-  &__picture {
-    height: 10rem;
-    width: 10rem;
-    object-fit: cover;
-    border-radius: 50%;
-    object-position: 50% 30%;
-  }
-}
-
 .header {
   height: 100%;
   position: fixed;
   &__container {
+    padding-top: 8rem;
     transition: all 0.2s;
     border-right: 1px solid $color-grey-dark;
     display: flex;
@@ -133,6 +117,7 @@
 
   @include respond(tab-port) {
     z-index: $highest-z-index;
+    height: 5rem;
     width: 100vh;
     &__container {
       transition: all 0.25s ease-in-out;
@@ -200,6 +185,9 @@
         color: $color-tertiary-light;
       }
     }
+    &__linkActive:link, &__linkActive:visited {
+      color: $color-tertiary-light;
+    }
   }
 
   &__footer {
@@ -218,6 +206,49 @@
   }
 }
 
+.logo {
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -1000px;
+  }
+  position: fixed;
+  padding: 2rem;
+  height: 4rem;
+  width: 20rem;
+  top: 2rem;
+  z-index: $highest-z-index;
+  background-image: url(../../assets/img/logo.svg);
+  background-size: cover;
+  @include respond(tab-port) {
+    padding: 2rem;
+    height: 5.5rem;
+    width: 10rem;
+    background-image: url(../../assets/img/mobile-logo.svg);
+    background-size: cover;
+    top: 2rem;
+    left: 1rem;
+  }
+}
+
+.profile {
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
+  }
+
+  &__picture {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: 50% 30%;
+  }
+}
+
 .main {
   position: relative;
   margin-left: 20rem; // The width of the sidebar
@@ -225,5 +256,7 @@
 
   @include respond(tab-port) {
     margin-left: 0;
+    margin-top: 10rem;
+    min-height: calc(100% - 5rem);
   }
 }

@@ -1,27 +1,59 @@
 {
-  "name": "Nexter",
-  "version": "1.0.0",
-  "description": "Nexter webpage",
-  "main": "index.js",
-  "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server --browser=edge",
-    "dev": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "delete:css": "rm css/style.comp.css css/style.prefix.css",
-    "build:css": "npm-run-all compile:sass  prefix:css compress:css delete:css",
-    "build": "npm-run-all build:css",
-    "start": "live-server"
+  "name": "miravicson-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-redux": "^7.2.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "node-sass": "^4.14.1"
   },
-  "author": "Jonas",
-  "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
-    "concat": "^1.0.3",
-    "node-sass": "^4.5.3",
-    "npm-run-all": "^4.1.1",
-    "postcss-cli": "^4.1.1"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-flow": "^7.9.0",
+    "@testing-library/react": "^9.5.0",
+    "babel-jest": "^26.6.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "flow-bin": "^0.109.0",
+    "husky": "^4.2.5",
+    "json-loader": "^0.5.7",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
