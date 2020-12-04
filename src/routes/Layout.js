@@ -2,16 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import user from "../assets/img/user.jpg";
-import {NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Layout({ children }) {
   return (
     <div className="container">
       <div className="layout">
         <header className="header">
-          <div className="logo">
-            <a href="index.html">logo</a>
-          </div>
+          <Link to="/" exact>
+            <div className="logo"></div>
+          </Link>
           <input
             type="checkbox"
             className="toggler__checkbox"

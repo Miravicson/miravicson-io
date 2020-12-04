@@ -1,36 +1,36 @@
 import React from "react";
 import withLayout from "../../routes/withLayout";
-
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <section className="home">
       <div className="introduction">
         <p>
           I'm{" "}
-          <a href="about.html" className="link-special">
+          <Link to="/about" className="link-special" exact>
             Victor Ughonu
-          </a>
+          </Link>
           .
         </p>
         <p>
           A Full-Stack{" "}
-          <a href="work.html" className="link-special">
+          <Link to="/work" className="link-special" exact>
             Software Developer
-          </a>
+          </Link>
           .
         </p>
         <p>
           I{" "}
-          <a href="blog.html" className="link-special">
+          <Link to="/blog" className="link-special" exact>
             write
-          </a>{" "}
+          </Link>{" "}
           about life, technology and Artificial Intelligence.
         </p>
         <p>
           I{" "}
-          <a href="shop.html" className="link-special">
+          <Link to="/shop" className="link-special" exact>
             sell
-          </a>{" "}
+          </Link>{" "}
           stuff.
         </p>
       </div>
