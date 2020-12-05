@@ -1,6 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
 import user from "../assets/img/user.jpg";
 import { Link, NavLink } from "react-router-dom";
 
@@ -9,17 +7,20 @@ function Layout({ children }) {
     <div className="container">
       <div className="layout">
         <header className="header">
-          <Link to="/" exact>
-            <div className="logo"></div>
-          </Link>
           <input
             type="checkbox"
             className="toggler__checkbox"
             id="navi-toggle"
           />
-          <label for="navi-toggle" className="toggler__button">
-            <span className="toggler__icon">&nbsp;</span>
-          </label>
+          <div className="mobile-nav">
+            <Link to="/">
+              <div className="logo"></div>
+            </Link>
+            <label htmlFor="navi-toggle" className="toggler__button">
+              <span className="toggler__icon">&nbsp;</span>
+            </label>
+          </div>
+
           <div className="header__container">
             <div className="profile__container">
               <img
@@ -98,13 +99,4 @@ function Layout({ children }) {
     </div>
   );
 }
-
-Layout.propTypes = {
-  prop: PropTypes,
-};
-
-const mapStateToProps = (state) => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Layout);
+export default Layout;

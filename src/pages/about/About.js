@@ -1,12 +1,11 @@
 import React from "react";
-import withLayout from "../../routes/withLayout";
 
 function About() {
   return (
     <section className="blog">
-      <h2>The Blog Page</h2>
+      <h2>About Me</h2>
     </section>
   );
 }
 
-export default withLayout(About);
+export default About;

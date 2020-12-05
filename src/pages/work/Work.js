@@ -1,5 +1,4 @@
 import React from "react";
-import withLayout from "../../routes/withLayout";
 
 function Work() {
   return (
@@ -9,4 +8,4 @@ function Work() {
   );
 }
 
-export default withLayout(Work);
+export default Work;

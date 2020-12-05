@@ -1,34 +1,35 @@
 import React from "react";
-import withLayout from "../../routes/withLayout";
 import { Link } from "react-router-dom";
-function Home() {
+import styles from './Home.module.scss'
+
+function Home(props) {
   return (
-    <section className="home">
-      <div className="introduction">
-        <p>
+    <section className={styles.Home}>
+      <div className={styles.Home__Introduction}>
+        <p className={styles.Profile}>
           I'm{" "}
-          <Link to="/about" className="link-special" exact>
+          <Link to="/about" className="link-special">
             Victor Ughonu
           </Link>
           .
         </p>
-        <p>
+        <p className={styles.FullStack}>
           A Full-Stack{" "}
-          <Link to="/work" className="link-special" exact>
+          <Link to="/work" className="link-special">
             Software Developer
           </Link>
           .
         </p>
-        <p>
+        <p className={styles.Writer}>
           I{" "}
-          <Link to="/blog" className="link-special" exact>
+          <Link to="/blog" className="link-special">
             write
           </Link>{" "}
           about life, technology and Artificial Intelligence.
         </p>
-        <p>
+        <p className={styles.Trader}>
           I{" "}
-          <Link to="/shop" className="link-special" exact>
+          <Link to="/shop" className="link-special">
             sell
           </Link>{" "}
           stuff.
@@ -38,4 +39,4 @@ function Home() {
   );
 }
 
-export default withLayout(Home);
+export default Home;

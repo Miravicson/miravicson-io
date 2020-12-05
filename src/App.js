@@ -7,19 +7,22 @@ import { Blog } from "./pages/blog";
 import { Shop } from "pages/shop";
 import { About } from "pages/about";
 import { Work } from "pages/work";
+import Layout from "routes/Layout";
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/blog" component={Blog} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/shop" component={Shop} />
-          <Route exact path="/work" component={Work} />
-          <Redirect to="/" />
-        </Switch>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/blog" component={Blog} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/shop" component={Shop} />
+            <Route exact path="/work" component={Work} />
+            <Redirect to="/" />
+          </Switch>
+        </Layout>
       </BrowserRouter>
     </Provider>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import withLayout from "../../routes/withLayout";
 
 function Shop() {
   return (
@@ -9,4 +8,4 @@ function Shop() {
   );
 }
 
-export default withLayout(Shop);
+export default Shop;

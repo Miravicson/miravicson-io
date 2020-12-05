@@ -9,4 +9,4 @@ function Blog() {
   );
 }
 
-export default withLayout(Blog);
+export default Blog;
