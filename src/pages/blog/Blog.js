@@ -1,5 +1,4 @@
 import React from "react";
-import withLayout from "../../routes/withLayout";
 
 function Blog() {
   return (
