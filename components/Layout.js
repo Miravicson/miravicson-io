@@ -1,7 +1,7 @@
 import user from "../img/user.jpg";
 import Link from "next/link";
 import NavLink from "./NavLink";
-import Image from 'next/image';
+
 
 function Layout({ children }) {
   return (
@@ -24,7 +24,7 @@ function Layout({ children }) {
 
           <div className="header__container">
             <div className="profile__container">
-              <Image
+              <img
                 src={user}
                 alt="Victor Ughonu"
                 className="profile__picture"
