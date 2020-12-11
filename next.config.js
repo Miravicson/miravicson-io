@@ -4,4 +4,5 @@ module.exports = withImages({
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  target: "serverless",
 });
