@@ -1,59 +1,27 @@
 {
-  "name": "miravicson",
+  "name": "miravicson-next",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-redux": "^7.2.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4",
+    "next": "10.0.3",
+    "next-images": "^1.6.2",
+    "next-redux-wrapper": "^6.0.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "node-sass": "^4.14.1"
+    "sass": "^1.30.0",
+    "sharp": "^0.26.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-flow": "^7.9.0",
-    "@testing-library/react": "^9.5.0",
-    "babel-jest": "^26.6.0",
-    "eslint-plugin-react-hooks": "^2.5.1",
-    "flow-bin": "^0.109.0",
-    "husky": "^4.2.5",
-    "json-loader": "^0.5.7",
-    "prettier": "1.19.1",
-    "pretty-quick": "^2.0.1",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-logger": "^3.0.6"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "express": "^4.17.1",
+    "next-offline": "^5.0.3"
   }
 }
