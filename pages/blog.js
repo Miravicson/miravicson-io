@@ -13,15 +13,6 @@ function Blog({ name, message }) {
   );
 }
 
-// export const getStaticProps = wrapper.getStaticProps(({ store, preview }) => {
-//   // store.dispatch({});
-//   return {
-//     props: {
-//       name: "hello",
-//       message: "hi"
-//   }}
-// });
-
 function mapStateToProps({ blog }) {
   return {
     name: blog.name,

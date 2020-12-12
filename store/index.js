@@ -4,8 +4,9 @@ import { createWrapper, HYDRATE } from "next-redux-wrapper";
 import { composeWithDevTools } from "redux-devtools-extension";
 import auth from "./reducers/auth";
 import blog from "./reducers/blog";
+import routes from "./reducers/routes";
 
-const rootReducer = combineReducers({ auth, blog });
+const rootReducer = combineReducers({ auth, blog, routes });
 /**
  *
  * @param {*} middleware

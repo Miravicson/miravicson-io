@@ -1,7 +1,7 @@
 import user from "../img/user.jpg";
 import Link from "next/link";
 import NavLink from "./NavLink";
-
+import Nav from "./Nav";
 
 function Layout({ children }) {
   return (
@@ -33,48 +33,11 @@ function Layout({ children }) {
               />
             </div>
             <div className="header__description">
-              <span>Software Developer.</span>
-              <span>Poet.</span>
-              <span>Intel AI Innovator.</span>
-              <span>IoT Developer.</span>
+              <span className="header__tag">Victor Chiagozie Ughonu</span>
+              <span className="header__tag">Software Engineer</span>{" "}
+              {/** create a sliding animation */}
             </div>
-            <nav className="nav">
-              <ul className="nav__list">
-                <li className="nav__item">
-                  <NavLink
-                    activeClassName="nav__linkActive"
-                    href="/"
-                    exact
-                  >
-                    <a className="nav__link">Home</a>
-                  </NavLink>
-                </li>
-                <li className="nav__item">
-                  <NavLink activeClassName="nav__linkActive" href="/blog" exact>
-                    <a className="nav__link">Blog</a>
-                  </NavLink>
-                </li>
-                <li className="nav__item">
-                  <NavLink href="/shop" activeClassName="nav__linkActive" exact>
-                    <a className="nav__link">Shop</a>
-                  </NavLink>
-                </li>
-                <li className="nav__item">
-                  <NavLink href="/work" activeClassName="nav__linkActive" exact>
-                    <a className="nav__link">Work</a>
-                  </NavLink>
-                </li>
-                <li className="nav__item">
-                  <NavLink
-                    href="/about"
-                    activeClassName="nav__linkActive"
-                    exact
-                  >
-                    <a className="nav__link">About</a>
-                  </NavLink>
-                </li>
-              </ul>
-            </nav>
+            <Nav />
             <footer className="header__footer">
               <p>Copyright &copy; 2020 Victor Ughonu.</p>
             </footer>

@@ -1,12 +1,12 @@
 .container {
   display: grid;
-  grid-template-columns: 10rem auto 10rem;
+  grid-template-columns: 20rem auto 20rem;
   grid-template-rows: 100vh;
   height: 100vh;
   position: relative;
 
   @include respond(tab-land) {
-    grid-template-columns: 0rem auto 5rem;
+    grid-template-columns: 10rem auto 10rem;
   }
   @include respond(tab-port) {
     grid-template-columns: auto;
@@ -31,13 +31,13 @@
   @include respond(tab-port) {
     &__button {
       animation-fill-mode: initial;
-      height: 7rem;
-      width: 7rem;
+      height: 5rem;
+      width: 5rem;
       text-align: center;
       cursor: pointer;
       position: fixed;
       z-index: $highest-z-index;
-      top: 0.8rem;
+      top: -0.2rem;
       right: 0.8rem;
       display: initial;
     }
@@ -82,11 +82,11 @@
 
 .header {
   height: 100%;
-  position: absolute;
+  position: fixed;
   &__container {
     padding-top: 8rem;
     transition: all 0.2s;
-    border-right: 1px solid $color-grey-dark;
+    border-right: 1px solid $color-grey-light-2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,6 +98,7 @@
   @include respond(tab-port) {
     height: 100vh;
     width: 100vw;
+    position: absolute;
     overflow: hidden;
     .toggler__checkbox:checked ~ .mobile-nav .toggler__button .toggler__icon {
       background-color: transparent;
@@ -112,7 +113,7 @@
     }
     .mobile-nav {
       border-bottom: 1px solid $color-grey-light-2;
-      height: 8rem;
+      height: 7rem;
       background-color: white;
       position: fixed;
       top: 0;
@@ -143,12 +144,26 @@
     }
   }
 
-  &__description {
+  &__tag {
+    font-family: $font-display;
+    font-size: $medium-font-size;
     text-align: center;
-    line-height: 1.2;
+    box-decoration-break: clone;
+    margin-top: .5rem;
+  }
+
+  &__tag + &__tag {
+    margin-left: 1rem;
+  }
+
+  &__description {
+    line-height: 1.4;
     width: 80%;
     font-size: $default-font-size;
     padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @include respond(tab-port) {
       font-size: $medium-font-size;
@@ -194,10 +209,10 @@
         text-transform: uppercase;
         font-weight: bold;
         letter-spacing: 0.04rem;
-        font-size: $medium-font-size;
+        font-size: $bigger-font-size;
 
         @include respond(tab-port) {
-          font-size: $big-font-size;
+          font-size: $large-font-size;
         }
       }
       &:hover,
@@ -215,7 +230,7 @@
     font-size: $small-font-size;
     padding: 2rem 0;
     margin-top: auto;
-    border-top: 1px solid $color-grey-dark;
+    border-top: 1px solid $color-grey-light-2;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -243,12 +258,12 @@
   background-size: cover;
   @include respond(tab-port) {
     padding: 2rem;
-    height: 5.5rem;
-    width: 10rem;
+    height: 5rem;
+    width: 8rem;
     background-image: url(../../img/mobile-logo.svg);
     background-size: cover;
-    top: 1.2rem;
-    left: 1.2rem;
+    top: 1rem;
+    left: 1rem;
   }
 }
 
@@ -276,11 +291,10 @@
 .main {
   position: relative;
   margin-left: 20rem; // The width of the sidebar
-  // min-height: 100%;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0rem;
   @include respond(tab-port) {
     margin-left: 0;
     min-height: calc(100% - 5rem);
-    padding: 10rem 2rem;
+    padding: 10rem 0rem;
   }
 }

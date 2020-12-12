@@ -4,43 +4,46 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import CustomHead from "../components/CustomHead";
 import React from "react";
+import { connect } from "react-redux";
 
-function Home(props) {
+function Home({ routes }) {
+  const renderAsLinkIf = (link, text) => {
+    if (routes.includes(link)) {
+      return (
+        <Link href={`/${link}`} className="link-special">
+          <a className="link-special">{text}</a>
+        </Link>
+      );
+    } else {
+      return <span>{text}</span>;
+    }
+  };
   return (
     <section className={styles.Home}>
       <CustomHead title="Home" />
       <div className={styles.Home__Introduction}>
         <p className={styles.Profile}>
-          I'm{" "}
-          <Link href="/about" className="link-special">
-            <a className="link-special">Victor Ughonu</a>
-          </Link>
-          .
+          I'm {renderAsLinkIf("about", "Victor Ughonu")}.
         </p>
         <p className={styles.FullStack}>
-          A Full-Stack{" "}
-          <Link href="/work" className="link-special">
-            <a className="link-special">Software Developer</a>
-          </Link>
-          .
+          A Full-Stack {renderAsLinkIf("work", "Software Developer")}.
         </p>
         <p className={styles.Writer}>
-          I{" "}
-          <Link href="/blog" className="link-special">
-            <a className="link-special">write</a>
-          </Link>{" "}
-          about life, technology and Artificial Intelligence.
+          I {renderAsLinkIf("blog", "write")} about life, technology and
+          Artificial Intelligence.
         </p>
         <p className={styles.Trader}>
-          I{" "}
-          <Link href="/shop" className="link-special">
-            <a className="link-special">sell</a>
-          </Link>{" "}
-          stuff.
+          I {renderAsLinkIf("shop", "sell")} stuff.
         </p>
       </div>
     </section>
   );
 }
 
-export default Home;
+function mapStateToProps({ routes }) {
+  return {
+    routes,
+  };
+}
+
+export default connect(mapStateToProps)(Home);

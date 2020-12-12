@@ -1,0 +1,86 @@
+@import "./abstracts/mixins";
+@import "./abstracts/animations";
+@import "./abstracts/variables";
+
+.About {
+  height: 100%;
+  min-width: 100%;
+  .Intro {
+    padding: 1rem 2rem;
+    font-size: 4rem;
+    font-family: $font-display;
+    font-weight: 300;
+    text-align: center;
+    &__bold {
+      font-weight: bolder;
+    }
+
+    @include respond(big-desktop) {
+      font-size: 3rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: $large-font-size;
+    }
+  }
+
+  .BackgroundImage {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+    @include respond(tab-port) {
+      height: 40vh;
+    }
+  }
+
+  .TextContainer {
+    display: grid;
+    grid-template-columns: 1fr 30rem;
+    height: 30%;
+    width: 100%;
+    column-gap: 2rem;
+    margin-top: -0.5rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .Article {
+    padding: 1em 2.5em;
+    font-size: $medium-font-size;
+    font-size: $big-font-size;
+
+    @include respond(big-desktop) {
+    }
+  }
+
+  .Aside {
+    background-color: $color-grey-light-2;
+    padding: 1em 2.5em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ItemCard {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    @include respond(tab-land) {
+      text-align: center;
+    }
+    &__title {
+      margin: 1rem 0;
+    }
+  }
+
+  .SocialMediaList {
+    list-style: none;
+    margin: 0;
+
+    &__Item {
+      line-height: 2;
+      font-size: $bigger-font-size;
+    }
+  }
+}
