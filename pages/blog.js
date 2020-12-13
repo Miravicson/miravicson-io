@@ -1,14 +1,13 @@
-import Head from "next/head";
 import { connect } from "react-redux";
+import ComingSoon from "../components/ComingSoon";
 import CustomHead from "../components/CustomHead";
-import { wrapper } from "../store";
+
 
 function Blog({ name, message }) {
   return (
     <section className="blog">
-      <CustomHead title="Blog" />
-      <h2>The Blog Page</h2>
-      <p>{message}</p>
+      <CustomHead title="Blog" description="Where Victor Ughonu shares his thoughts about technology, life as and conversations of topical interests." />
+      <ComingSoon title="blog" />
     </section>
   );
 }

@@ -1,9 +1,16 @@
-import user from "../img/user.jpg";
+import React, { useState } from "react";
+import user from "../img/victor-ughonu.jpg";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import Nav from "./Nav";
 
 function Layout({ children }) {
+  const [menuState, setMenuState] = useState(false);
+
+  const toggleMenu = () => setMenuState((prevState) => !prevState);
+
+  const closeMenu = () => setMenuState(false);
+
   return (
     <div className="container">
       <div className="layout">
@@ -12,12 +19,18 @@ function Layout({ children }) {
             type="checkbox"
             className="toggler__checkbox"
             id="navi-toggle"
+            checked={menuState}
+            readOnly
           />
           <div className="mobile-nav">
             <Link href="/">
-              <div className="logo"></div>
+              <div className="logo" onClick={closeMenu}></div>
             </Link>
-            <label htmlFor="navi-toggle" className="toggler__button">
+            <label
+              htmlFor="navi-toggle"
+              className="toggler__button"
+              onClick={toggleMenu}
+            >
               <span className="toggler__icon">&nbsp;</span>
             </label>
           </div>
@@ -37,7 +50,7 @@ function Layout({ children }) {
               <span className="header__tag">Software Engineer</span>{" "}
               {/** create a sliding animation */}
             </div>
-            <Nav />
+            <Nav toggleMenu={toggleMenu} />
             <footer className="header__footer">
               <p>Copyright &copy; 2020 Victor Ughonu.</p>
             </footer>

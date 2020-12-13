@@ -1,9 +1,8 @@
-import Head from "next/head";
+import React from "react";
 import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import CustomHead from "../components/CustomHead";
-import React from "react";
 import { connect } from "react-redux";
 
 function Home({ routes }) {
@@ -19,24 +18,27 @@ function Home({ routes }) {
     }
   };
   return (
-    <section className={styles.Home}>
-      <CustomHead title="Home" />
-      <div className={styles.Home__Introduction}>
-        <p className={styles.Profile}>
+    <div className={styles.Home}>
+      <CustomHead
+        title="Home"
+        description="Home page for the website for Victor Ughonu"
+      />
+      <section className={styles.Home__Introduction}>
+        <h1 className={styles.Profile}>
           I'm {renderAsLinkIf("about", "Victor Ughonu")}.
-        </p>
-        <p className={styles.FullStack}>
+        </h1>
+        <h1 className={styles.FullStack}>
           A Full-Stack {renderAsLinkIf("work", "Software Developer")}.
-        </p>
-        <p className={styles.Writer}>
+        </h1>
+        <h1 className={styles.Writer}>
           I {renderAsLinkIf("blog", "write")} about life, technology and
           Artificial Intelligence.
-        </p>
-        <p className={styles.Trader}>
+        </h1>
+        <h1 className={styles.Trader}>
           I {renderAsLinkIf("shop", "sell")} stuff.
-        </p>
-      </div>
-    </section>
+        </h1>
+      </section>
+    </div>
   );
 }
 

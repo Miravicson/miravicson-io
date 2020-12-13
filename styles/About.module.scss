@@ -19,8 +19,13 @@
       font-size: 3rem;
     }
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
       font-size: $large-font-size;
+      @include avoid-mobile-nav;
+    }
+
+    @include respond(phone){
+      font-size: 2.2rem;
     }
   }
 

@@ -19,6 +19,9 @@
   transform: translateY(-50%);
 }
 
+@mixin avoid-mobile-nav {
+  padding-top: 10rem;
+}
 // MEDIA QUERY MANAGER
 
 /*

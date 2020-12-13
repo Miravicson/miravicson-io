@@ -1,9 +1,10 @@
 import Head from "next/head";
 import CustomHead from "../components/CustomHead";
 import styles from "../styles/About.module.scss";
-import background from "../img/background4.jpg";
+import background from "../img/victor-ughonu-banner.jpg";
 import Link from "next/link";
 import socialMediaData from "../data/social-media";
+import Image from "next/image";
 
 const SocialMediaList = ({ data }) => {
   return (
@@ -11,7 +12,7 @@ const SocialMediaList = ({ data }) => {
       {data.map((socialMediaItem) => {
         const { name, link } = socialMediaItem;
         return (
-          <li className={styles.SocialMediaList__Item}>
+          <li className={styles.SocialMediaList__Item} key={`${name}-${link}`}>
             <a className="link-special" href={link} target="_blank">
               {name}
             </a>
@@ -25,16 +26,24 @@ const SocialMediaList = ({ data }) => {
 function About() {
   return (
     <div className={styles.About}>
-      <CustomHead title="About Me" />
+      <CustomHead title="About Me" description={"About Victor Ughonu"} />
       <section>
-        <h2 className={styles.Intro}>
+        <h1 className={styles.Intro}>
           <span className={styles.Intro__bold}> I am Victor Ughonu,</span> a
           software, IoT and AI developer.
-        </h2>
-        <img
+        </h1>
+        {/* <img
           className={styles.BackgroundImage}
           alt="Victor Ughonu smiling"
           src={background}
+        /> */}
+        <Image
+          className={styles.BackgroundImage}
+          alt="Victor Ughonu smiling"
+          src={background}
+          width="5184"
+          height="3000"
+          layout="responsive"
         />
       </section>
       <section className={styles.TextContainer}>

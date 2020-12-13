@@ -1,12 +1,12 @@
 .container {
   display: grid;
-  grid-template-columns: 20rem auto 20rem;
+  grid-template-columns: 10rem auto 10rem;
   grid-template-rows: 100vh;
   height: 100vh;
   position: relative;
 
   @include respond(tab-land) {
-    grid-template-columns: 10rem auto 10rem;
+    grid-template-columns: 5rem auto 5rem;
   }
   @include respond(tab-port) {
     grid-template-columns: auto;
@@ -78,6 +78,45 @@
       transform: translateY(0.2rem);
     }
   }
+
+  @include respond(phone) {
+    &__button {
+      top: -0.7rem;
+      right: 0.6rem;
+    }
+  }
+}
+
+.logo {
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -1000px;
+  }
+  position: fixed;
+  padding: 2rem;
+  height: 4rem;
+  width: 20rem;
+  top: 2rem;
+  z-index: $highest-z-index;
+  background-image: url(../../img/logo.svg);
+  background-size: cover;
+  @include respond(tab-port) {
+    padding: 2rem;
+    height: 5rem;
+    width: 8rem;
+    background-image: url(../../img/mobile-logo.svg);
+    background-size: cover;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  @include respond(phone) {
+    height: 4rem;
+    width: 6rem;
+    padding: 1rem;
+  }
 }
 
 .header {
@@ -144,12 +183,18 @@
     }
   }
 
+  @include respond(phone) {
+    .mobile-nav {
+      height: 6rem;
+    }
+  }
+
   &__tag {
     font-family: $font-display;
     font-size: $medium-font-size;
     text-align: center;
     box-decoration-break: clone;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   &__tag + &__tag {
@@ -241,32 +286,6 @@
   }
 }
 
-.logo {
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-indent: -1000px;
-  }
-  position: fixed;
-  padding: 2rem;
-  height: 4rem;
-  width: 20rem;
-  top: 2rem;
-  z-index: $highest-z-index;
-  background-image: url(../../img/logo.svg);
-  background-size: cover;
-  @include respond(tab-port) {
-    padding: 2rem;
-    height: 5rem;
-    width: 8rem;
-    background-image: url(../../img/mobile-logo.svg);
-    background-size: cover;
-    top: 1rem;
-    left: 1rem;
-  }
-}
-
 .profile {
   &__container {
     width: 100%;
@@ -291,10 +310,10 @@
 .main {
   position: relative;
   margin-left: 20rem; // The width of the sidebar
-  padding: 2rem 0rem;
+  // padding: 2rem 0rem;
   @include respond(tab-port) {
     margin-left: 0;
     min-height: calc(100% - 5rem);
-    padding: 10rem 0rem;
+    // padding: 10rem 0rem;
   }
 }
