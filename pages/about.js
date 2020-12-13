@@ -4,7 +4,7 @@ import styles from "../styles/About.module.scss";
 import background from "../img/victor-ughonu-banner.jpg";
 import Link from "next/link";
 import socialMediaData from "../data/social-media";
-import Image from "next/image";
+// import Image from "next/image";
 
 const SocialMediaList = ({ data }) => {
   return (
@@ -13,7 +13,7 @@ const SocialMediaList = ({ data }) => {
         const { name, link } = socialMediaItem;
         return (
           <li className={styles.SocialMediaList__Item} key={`${name}-${link}`}>
-            <a className="link-special" href={link} target="_blank">
+            <a className="link-special" href={link} target="_blank" rel="noopener">
               {name}
             </a>
           </li>
@@ -32,19 +32,19 @@ function About() {
           <span className={styles.Intro__bold}> I am Victor Ughonu,</span> a
           software, IoT and AI developer.
         </h1>
-        {/* <img
+        <img
           className={styles.BackgroundImage}
           alt="Victor Ughonu smiling"
           src={background}
-        /> */}
-        <Image
+        />
+        {/* <Image
           className={styles.BackgroundImage}
           alt="Victor Ughonu smiling"
           src={background}
           width="5184"
           height="3000"
           layout="responsive"
-        />
+        /> */}
       </section>
       <section className={styles.TextContainer}>
         <article className={styles.Article}>
