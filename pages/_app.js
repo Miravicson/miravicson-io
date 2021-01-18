@@ -1,8 +1,9 @@
 import App from "next/app";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import withRedux from "next-redux-wrapper";
 import { Provider } from "react-redux";
 import "../styles/main.scss";
+// import '../styles/index.css'
 import makeStore, { wrapper } from "../store";
 
 function MyApp({ Component, pageProps }) {

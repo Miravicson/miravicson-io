@@ -1,5 +1,5 @@
-import ComingSoon from "../components/ComingSoon";
-import CustomHead from "../components/CustomHead";
+import ComingSoon from "../components/coming-soon";
+import CustomHead from "../components/custom-head";
 
 function Work() {
   return (

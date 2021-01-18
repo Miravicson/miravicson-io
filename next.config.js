@@ -1,14 +1,14 @@
-const path = require("path");
-const withImages = require("next-images");
+const path = require('path');
+const withImages = require('next-images');
 module.exports = withImages({
   sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+    includePaths: [path.join(__dirname, 'styles')],
   },
-  target: "serverless",
+  target: 'serverless',
   esModule: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (isServer) {
-      require("./utils/generateSiteMap");
+      require('./utils/generateSiteMap');
     }
     return config;
   },

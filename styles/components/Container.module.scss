@@ -1,0 +1,11 @@
+@import "./abstracts/mixins";
+@import "./abstracts/animations";
+@import "./abstracts/variables";
+
+.Container {
+  height: 100%;
+  min-width: 100%;
+  @include respond(tab-port) {
+    @include avoid-mobile-nav;
+  }
+}
