@@ -45,9 +45,8 @@ function About() {
           >
             {(src, loading) => (
               <img
-                // style={{ opacity: loading ? 0.5 : 1 }}
                 src={src}
-                alt="an image"
+                alt="Victor Ughonu's Main Image"
                 className={styles.BackgroundImage}
               />
             )}
