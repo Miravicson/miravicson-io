@@ -9,22 +9,35 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "date-fns": "^2.16.1",
     "globby": "^11.0.1",
+    "gray-matter": "^4.0.2",
     "next": "10.0.3",
     "next-images": "^1.6.2",
     "next-redux-wrapper": "^6.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-lottie": "^1.2.3",
+    "react-progressive-image": "^0.6.0",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
     "sass": "^1.30.0",
-    "sharp": "^0.26.3"
+    "sharp": "^0.26.3",
+    "slugify": "^1.4.6"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.1",
     "express": "^4.17.1",
-    "next-offline": "^5.0.3"
+    "next-offline": "^5.0.3",
+    "postcss": "^8.2.4",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "precss": "^4.0.0",
+    "tailwindcss": "^2.0.2"
   }
 }

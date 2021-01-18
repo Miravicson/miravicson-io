@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/Home.module.scss";
 import Link from "next/link";
-import Layout from "../components/Layout";
-import CustomHead from "../components/CustomHead";
+import Layout from "../components/layout";
+import CustomHead from "../components/custom-head";
 import { connect } from "react-redux";
 
 function Home({ routes }) {
@@ -20,8 +20,8 @@ function Home({ routes }) {
   return (
     <div className={styles.Home}>
       <CustomHead
-        title="Home"
-        description="Home page for the website for Victor Ughonu"
+        title="Victor Ughonu - Software Developer"
+        description="Victor Ughonu's Home Page"
       />
       <section className={styles.Home__Introduction}>
         <h1 className={styles.Profile}>

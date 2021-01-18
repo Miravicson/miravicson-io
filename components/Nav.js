@@ -1,5 +1,5 @@
 import routes from "../data/routes";
-import NavLink from "./NavLink";
+import NavLink from "./nav-link";
 import PropTypes from "prop-types";
 
 const NavItem = ({ navItem, toggleMenu }) => {

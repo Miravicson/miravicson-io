@@ -1,5 +1,6 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import ogImage from "../img/victor-ughonu-banner.jpg";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+const ogImage = '/img/victor-ughonu-banner-small.jpg';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -53,7 +54,7 @@ class MyDocument extends Document {
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i"
+            href="https://fonts.googleapis.com/css2?family=Lato&family=PT+Serif&display=swap"
             rel="stylesheet"
           />
           <link rel="manifest" href="/manifest.json" />
@@ -63,20 +64,6 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" sizes="180x180" href="" />
           <link rel="mask-icon" href="" color="#fff" />
           <link rel="shortcut icon" href="" />
-
-          {/* <link rel="alternate" href="" hrefLang="en" />
-          <link rel="alternate" href="" hrefLang="fr" /> */}
-          {/* <link
-            href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Josefin+Sans:wght@100;400&display=swap"
-            rel="stylesheet"
-          />
-          <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet" /> */}
-          {/* <meta
-            name="description"
-            content="Victor Ughonu's Profile Page. This is where Victor discusses topical technologies and shares his insights, opinions and stories regarding, but not limited to, software development, his interest in music, items that influenced him, amazing experience and religion."
-          /> */}
         </Head>
         <body>
           <Main />

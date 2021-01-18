@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import user from "../img/victor-ughonu.jpg";
-import Link from "next/link";
-import NavLink from "./NavLink";
-import Nav from "./Nav";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import NavLink from './nav-link';
+import Nav from './nav';
+import ProgressiveImage from 'react-progressive-image';
 
 function Layout({ children }) {
   const [menuState, setMenuState] = useState(false);
@@ -12,7 +12,7 @@ function Layout({ children }) {
   const closeMenu = () => setMenuState(false);
 
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <div className="layout">
         <header className="header">
           <input
@@ -37,17 +37,25 @@ function Layout({ children }) {
 
           <div className="header__container">
             <div className="profile__container">
-              <img
-                src={user}
-                alt="Victor Ughonu"
-                className="profile__picture"
-                height="100px"
-                width="100px"
-              />
+              <ProgressiveImage
+                src="/img/victor-ughonu.jpg"
+                placeholder="/img/victor-ughonu-small.jpg"
+              >
+                {(src, loading) => (
+                  <img
+                    style={{ opacity: loading ? 0.5 : 1 }}
+                    src={src}
+                    alt="Victor Ughonu"
+                    className="profile__picture"
+                    height="100px"
+                    width="100px"
+                  />
+                )}
+              </ProgressiveImage>
             </div>
             <div className="header__description">
               <span className="header__tag">Victor Chiagozie Ughonu</span>
-              <span className="header__tag">Software Engineer</span>{" "}
+              <span className="header__tag">Software Engineer</span>{' '}
               {/** create a sliding animation */}
             </div>
             <Nav toggleMenu={toggleMenu} />

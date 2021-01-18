@@ -1,0 +1,27 @@
+@import './abstracts/mixins';
+@import './abstracts/animations';
+@import './abstracts/variables';
+
+.Blog {
+  height: 100%;
+  min-width: 100%;
+  @include respond(tab-port) {
+    @include avoid-mobile-nav;
+  }
+}
+
+.BlogHeader, .BlogLists {
+  padding: 1rem 3.5rem;
+}
+
+.BlogLists {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.BlogItem {
+  padding: 2rem 0;
+  font-size: $bigger-font-size;
+  border-bottom: 1px solid $color-grey-light-2;
+}
+
