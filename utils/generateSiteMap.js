@@ -7,7 +7,7 @@ async function generateSiteMap() {
     "!pages/_*.js",
     "!pages/**/[id].js",
     "!pages/api",
-    "posts/*.md",
+    "!_posts/*.md",
   ]);
   const sitemap = `
       <?xml version="1.0" encoding="UTF-8"?>

@@ -9,3 +9,7 @@ author:
 ogImage:
   url: '/img/blog/operator-to-prog/cover.jpg'
 ---
+
+A reason why any computer operator should get familiar with the command prompt
+
+When I work with my computer, I usually have two personalities. The firs personality is one fo the "Computer Operator"; the kind that tries to work within the limits of actions prescribed by the software applications installed on the laptop he is using. My "computer operator" personality is the kind of guy who would use microsoft excel to get information about the number of students that attended any event by scrolling all the way through a long page of names, bearing patiently the boredom surrounding such meanial chore while checking for duplicates. This personality is very patient and is content to stay within the limits of whatever software he is using and allows such software dete
