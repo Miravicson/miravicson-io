@@ -6,11 +6,8 @@ import ProgressiveImage from 'react-progressive-image';
 
 function Layout({ children }) {
   const [menuState, setMenuState] = useState(false);
-
   const toggleMenu = () => setMenuState((prevState) => !prevState);
-
   const closeMenu = () => setMenuState(false);
-
   return (
     <div className="container mx-auto">
       <div className="layout">
@@ -34,7 +31,6 @@ function Layout({ children }) {
               <span className="toggler__icon">&nbsp;</span>
             </label>
           </div>
-
           <div className="header__container">
             <div className="profile__container">
               <ProgressiveImage
