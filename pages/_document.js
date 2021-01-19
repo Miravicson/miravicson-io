@@ -53,10 +53,15 @@ class MyDocument extends Document {
           {/* Links */}
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
+          {/* <link
             href="https://fonts.googleapis.com/css2?family=Lato&family=PT+Serif&display=swap"
             rel="stylesheet"
+          /> */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap"
+            rel="stylesheet"
           />
+
           <link rel="manifest" href="/manifest.json" />
           <link rel="icon" type="image/png" href="" sizes="16x16" />
           <link rel="icon" type="image/png" href="" sizes="32x32" />

@@ -25,17 +25,17 @@ function Home({ routes }) {
       />
       <section className={styles.Home__Introduction}>
         <h1 className={styles.Profile}>
-          I'm {renderAsLinkIf("about", "Victor Ughonu")}.
+          I&#8217;m {renderAsLinkIf('about', 'Victor Ughonu')}.
         </h1>
         <h1 className={styles.FullStack}>
-          A Full-Stack {renderAsLinkIf("work", "Software Developer")}.
+          A Full-Stack {renderAsLinkIf('work', 'Software Developer')}.
         </h1>
         <h1 className={styles.Writer}>
-          I {renderAsLinkIf("blog", "write")} about life, technology and
+          I {renderAsLinkIf('blog', 'write')} about life, technology and
           Artificial Intelligence.
         </h1>
         <h1 className={styles.Trader}>
-          I {renderAsLinkIf("shop", "sell")} stuff.
+          I {renderAsLinkIf('shop', 'sell')} stuff.
         </h1>
       </section>
     </div>

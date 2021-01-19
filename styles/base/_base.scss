@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  background-color: $color-grey-light-3;
   font-size: 62.5%; // 1rem = 10px; 10px / 16px = 62.5%
   @include respond(big-desktop) {
     font-size: 80%;
