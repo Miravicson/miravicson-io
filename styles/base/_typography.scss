@@ -4,6 +4,10 @@ body {
   line-height: 1.5;
   color: $color-primary-dark;
   font-size: $default-font-size;
+
+  @include respond(tab-land) {
+    font-size: 1.2rem;
+  }
 }
 
 %heading {

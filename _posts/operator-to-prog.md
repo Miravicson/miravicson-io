@@ -10,11 +10,10 @@ ogImage:
   url: '/img/blog/operator-to-prog/cover.jpg'
 ---
 
-## **Behold Initiate, you are about to become a programmer**  
 
-When I work on my computer, I usually have two personalities. The first personality is one fo the "_Comptuer Operator_"; He tries to work within the limits of actions prescribed by the software applications installed on the laptop he is using. 
+When I work on my computer, I usually have two personalities. The first personality is one fo the "_Computer Operator_"; He tries to work within the limits of actions prescribed by the software applications installed on the laptop he is using. 
 
-My _Comptuer Operator_ personality would use Microsoft Excel to get information about the number of students that attended any event by scrolling through a long page of names. He slugs through menial chores involving numerous mouse clicks, switching of screens and occasional clumsy keyboard shortcuts.
+My _Computer Operator_ personality would use Microsoft Excel to get information about the number of students that attended any event by scrolling through a long page of names. He slugs through menial chores involving numerous mouse clicks, switching of screens and occasional clumsy keyboard shortcuts.
 This personality is very patient and content to stay within the limits of whatever software he is using. He allows such software to dictate what he can or cannot do.
 
 There is the other personality, the one who believes that computers can and should do the boring tasks. He knows all the requirement to get computers to work for him is to speak the computers language.
@@ -30,7 +29,7 @@ At the risk of sounding dramatic, the gist is that I didn't get the file to open
 
 To give you context, I have never bothered about installing a separate application just for unzipping/decompressing files. I knew there exists a manifold selection of applications for unzipping files ranging from WinRar to WinZip.
 
-My "_Comptuer Operator_" kicked in and decided to solve the problem of unzipping the file I just downloaded. He followed the prompt suggested by Mac. There were three choices.
+My "_Computer Operator_" kicked in and decided to solve the problem of unzipping the file I just downloaded. He followed the prompt suggested by Mac. There were three choices.
 
 * Choose application [to open the file]
 * Cancel _duh!_
@@ -65,11 +64,11 @@ I would not bore you by explaining what the commands mean; suffice to say this i
 Why couldn't the file be unzipped using the GUI?. I wondered how much power has been locked away from us behind deceitful icons and buttons.
 I thought about all the popular paid applications for decompressing files and wondered if there was any other feature these "premium" software offered besides running some simple command. I wondered if these features could justify some of the price tags.
 
-So here I was the same person facing a problem on one hand as a _Comptuer Operator_ and solving the problem on the other hand as a computer programmer. What change? Simply a realization that the most direct way to operate a computer is to give it direct instructions. By typing commands on the terminal, you dispense with all the indirections created by app developers with the good intention of providing you with "friendly" interface and you get down to the raw engine.
+So here I was the same person facing a problem on one hand as a _Computer Operator_ and solving the problem on the other hand as a computer programmer. What change? Simply a realization that the most direct way to operate a computer is to give it direct instructions. By typing commands on the terminal, you dispense with all the indirections created by app developers with the good intention of providing you with "friendly" interface and you get down to the raw engine.
 
 While working on a black screen with white text might seem intimidating at first, you would quickly discover that it can be quite friendly once you have mastered the basics and what's more? The power you will have unlocked makes learning the command prompt a good bargain.
 
-If I have not convinced you yet of the advantages of having a knowledge of the command prompt in your toolkit as a _Comptuer Operator_, consider this, you become a __Computer Operator Pro Max__ when you learn the command prompt because you have a better understanding of how things work under the hood and this knowledge lets you transcend the limitations of most UI-based software. 
+If I have not convinced you yet of the advantages of having a knowledge of the command prompt in your toolkit as a _Computer Operator_, consider this, you become a _Computer Operator Pro Max_ when you learn the command prompt because you have a better understanding of how things work under the hood and this knowledge lets you transcend the limitations of most UI-based software. 
 
 Furthermore, you are on the porch of becoming a programmer. The fundamental idea of programming is the same with the idea of using the command prompt and this idea is simply one of learning how to communicate to computers directly in the language they understand.
 
