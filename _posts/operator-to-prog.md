@@ -20,12 +20,12 @@ There is the other personality, the one who believes that computers can and shou
 
 **Why am I talking about computers and menial work?**
 
-So a funny incident happened to me just now and I decided to write about it and share immediately lest procrastination deprives me of the opportunity to read you, yes you who have been wondering how to make the transition to becoming a programmer; your inaugural speech 😀.
+So a funny incident happened to me just now and I decided to write about it and share immediately lest procrastination deprives me of the opportunity to share this story which I hope might give all computer operators wondering how to broach the field of computer programming an incentive or a way to start.
 
 I decided to download a file on my Mac, specifically a tar file.
-I tried to do what everyone would do when trying to open a compressed file, that is to simply double click on the file. To my astonishment, I double-clicked, triple-clicked and quadruple-clicked.
+Everyone who had ever downloaded a file would intuitively try double-clicking the file in order to open/unzip/decompress the file, and that's what I did. However even after double-clicking, triple-clicking nothing worked.
 
-At the risk of sounding dramatic, the gist is that I didn't get the file to open but rather a terse note from Mac saying "There is no application set to open the document." Weird I thought.
+At the risk of sounding dramatic, the gist is; I didn't get the file to open but rather a terse note from Mac saying "There is no application set to open the document." Weird I thought.
 
 To give you context, I have never bothered about installing a separate application just for unzipping/decompressing files. I knew there exists a manifold selection of applications for unzipping files ranging from WinRar to WinZip.
 
@@ -38,20 +38,19 @@ My "_Computer Operator_" kicked in and decided to solve the problem of unzipping
 Of course, I would not cancel. I was left with two other options.
 
 Clicking on "Choose application" revealed a menu of "Recommended applications" none of which had any indication that they were designed to unzip files.
-Surprisingly, I expected to see probably the default Mac application that enabled me decompress ".zip" files.
+Surprisingly, I expected to see probably the default Mac application that enabled me decompress `.zip` files.
 
-At this point, I was losing my patience. Unzipping the file was not my main objective and I just was too ridiculous to think of having to read articles in order to unzip files.
+At this point, I was losing my patience. Unzipping the file was not my main objective and It just was too ridiculous to think of having to read articles in order to unzip files.
 Searching the app store was simply out of question.
 
-I had hit the limits of my frustration and then I realized that I was a programmer, or at least I knew how to use the terminal/command prompt.
-As a programmer, I am instinctively domiciled in the command prompt.
+I had hit the limits of my patience and then like the prodigal son, I realized that I was a programmer, or at least I knew how to use the terminal/command prompt.
+
+As a programmer, when I work, I am instinctively domiciled in the command prompt.
 Whether it be navigating to a new folder, copying and pasting files, installing programs, renaming files, you name it 😃, I do all these in the terminal by typing direct commands.
 
-Speaking of installing programs, most Unix-based laptops, i.e Mac and Ubuntu, have their programs packaged not in a convenient click-and-install manner like is conventional for windows programs. It is a common first step when installing a program in Mac, to decompress said compressed programs before installing them.
+Speaking of installing programs, most Unix-based laptops, i.e Mac and Ubuntu, have their programs packaged not in a convenient click-and-install manner like is conventional for windows programs. It is a common first step when installing a program in Mac, to decompress said compressed programs before installing them. All the while I installed linux programs, I had always done it `programmatically` in order words, by running some commands in my command prompt.
 
-I always uncompressed files in the command prompt whenever I was installing my development software, it only seemed natural to my programmer self. There was actually nothing, besides the fact that I wasn't programming, stopping me from unzipping the file I had just downloaded.
-
-I decided to give the command prompt a try and ran the command that I had run so frequently that I could type without thinking.
+I decided to give the command prompt a try; and run the command that I had run so frequently that I could type them out without thinking.
 
 ```bash
      $ tar -xvf stubborn_file.rar
