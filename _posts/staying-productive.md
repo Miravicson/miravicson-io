@@ -1,0 +1,34 @@
+---
+title: "How I stay productive working remotely"
+excerpt: 'How I stay productive working remotely'
+coverImage: '/img/blog/staying-productive/image1.jpeg'
+date: '2021-04-14T22:14:47.076Z'
+author:
+  name: Victor Ughonu
+  picture: '/img/blog/authors/vu.jpg'
+ogImage:
+  url: '/img/blog/staying-productive/image1.jpeg'
+---
+
+
+
+## Getting the domestics out of the way:
+
+Since I am work from home, it is usually always tempting to skip breakfast and a shower and just dive right into working from bed. Although I have succumbed to this a few times, my most productive days are the days I start by having breakfast, having a shower and dressing up. This sets the tone for my day.
+
+## Organize my work landscape:
+
+I take a look at my Jira board to get a general overview of tasks that I am to work on paying attention to the priority of the tasks. 
+Often I might recognize that some tasks or features might require further clarifications and elaborations, I make note of such tasks to schedule a meeting with my pm to seek necessary clarifications. I am found that I am most motivated when I can organize my tasks into tangible well-defined goals.
+
+## We are not meant for monotonous tasks:
+
+Programming can be boring, what's not boring is achieving goals and getting a reward for yourself. Leaning on the goals I have created, I break my work times into chunks of about an hour and a half punctuated with 15 mins breaks. These 15 minutes breaks are recreational time that I utilize to reward myself for staying focus. I use these times to check Instagram, Watch a YouTube video or catch up on highlights of previous matches. And then repeat. I have found that the variety of activities within the time slot helps eliminate boredom for me and keeps me pumped and productive.
+
+## Other things I do to stay productive and spiced up 😄
+
+* I keep a checkoff every accomplished task off a 'physical' todo; Plain ol' note and paper.
+* I play white noise while working to encourage concentration, I love the sound of "rainfall and thunderstorms"
+* I change my VSCode Color theme frequently -- another way I keep from getting bored.
+
+Thanks for reading 🙏

@@ -7,12 +7,12 @@ export default [
     name: "blog",
     link: "/blog",
   },
-  {
-    name: "shop",
-    link: "/shop",
-  },
-  {
-    name: "work",
-    link: "/work",
-  },
+  // {
+  //   name: "shop",
+  //   link: "/shop",
+  // },
+  // {
+  //   name: "work",
+  //   link: "/work",
+  // },
 ];
