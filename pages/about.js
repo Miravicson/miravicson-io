@@ -35,8 +35,8 @@ function About() {
         <CustomHead title="About Me" description={'About Victor Ughonu'} />
         <section>
           <h1 className={styles.Intro}>
-            <span className={styles.Intro__bold}> I am Victor Ughonu,</span> a
-            software, IoT and AI developer.
+            <span className={styles.Intro__bold}> I am Victor Ughonu,</span>{' '}
+            a software developer.
           </h1>
 
           <ProgressiveImage

@@ -15,14 +15,6 @@
                       </url>
                   
                       <url>
-                          <loc>https://www.miravicson.com/shop</loc>
-                      </url>
-                  
-                      <url>
-                          <loc>https://www.miravicson.com/work</loc>
-                      </url>
-                  
-                      <url>
                           <loc>https://www.miravicson.com/posts/[slug]</loc>
                       </url>
                   

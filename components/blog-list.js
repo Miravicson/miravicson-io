@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import blogData from '../data/dummy-blog';
-import styles from '../styles/Blog.module.scss';
 import Link from 'next/link';
 
 const BlogItem = ({ post }) => {
   return (
-    <div className={styles.BlogItem}>
+    <div
+      className={`py-8 border-b border-[#f7f7f7] text-[2.2rem]`}
+    >
       <Link href={`/posts/${post.slug}`}>
         <a className="link-special">
           <p>{post.title}</p>
@@ -22,7 +22,7 @@ BlogItem.propTypes = {
 
 const BlogLists = ({ posts }) => {
   return (
-    <div className={styles.BlogLists}>
+    <div className={`py-4 px-[3.5rem]`}>
       {posts.map((post) => (
         <BlogItem post={post} key={post.id} />
       ))}
