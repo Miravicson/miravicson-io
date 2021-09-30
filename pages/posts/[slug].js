@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Date from '../../components/date';
 import Container from '../../components/container';
 import PostBody from '../../components/post-body';
 import PostHeader from '../../components/post-header';
