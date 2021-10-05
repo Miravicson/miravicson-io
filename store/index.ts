@@ -1,6 +1,14 @@
-import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
+//@ts-nocheck
+
+import {
+  combineReducers,
+  createStore,
+  compose,
+  applyMiddleware,
+  Store,
+} from 'redux';
 import thunk from 'redux-thunk';
-import { createWrapper, HYDRATE } from 'next-redux-wrapper';
+import { createWrapper, HYDRATE, Context } from 'next-redux-wrapper';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import auth from './reducers/auth';
 import blog from './reducers/blog';
@@ -20,7 +28,7 @@ function composeMiddleWare(middleware = [], ...enhancers) {
   return compose(applyMiddleware(...middleware), ...enhancers);
 }
 
-const makeStore = (preloadedState, options) => {
+const makeStore = (preloadedState) => {
   const { locales, locale, defaultLocale, ...restOfPreloadedState } =
     preloadedState;
   return createStore(
@@ -29,5 +37,9 @@ const makeStore = (preloadedState, options) => {
     composeMiddleWare([thunk])
   );
 };
-export const wrapper = createWrapper(makeStore, { debug: false });
+
+interface State {
+
+}
+export const wrapper = createWrapper<Store<Record<string, unknown>>>(makeStore, { debug: false });
 export default makeStore;

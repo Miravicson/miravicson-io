@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from 'axios';
 
 const getLatestRepos = async (data, token) => {
   // console.log("data", data);
@@ -9,7 +9,7 @@ const getLatestRepos = async (data, token) => {
     // console.log("TOKEN", token);
 
     if (token) {
-      const res = await axios.get(
+      const res: AxiosResponse<{ items: [] }> = await axios.get(
         `https://api.github.com/search/repositories?q=user:${username}+sort:author-date-asc`,
         {
           headers: {
@@ -22,7 +22,7 @@ const getLatestRepos = async (data, token) => {
       // console.log("LATEST 6 repos", latestSixRepos);
       return latestSixRepos;
     } else {
-      const res = await axios.get(
+      const res: AxiosResponse<{ items: [] }> = await axios.get(
         `https://api.github.com/search/repositories?q=user:${username}+sort:author-date-asc`
       );
       let repos = res.data.items;

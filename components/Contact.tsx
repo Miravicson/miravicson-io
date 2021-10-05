@@ -166,8 +166,7 @@ export default function Contact() {
               Message
             </label>
             <textarea
-              rows="4"
-              type="text"
+              rows={4}
               className="px-1 py-2 mx-4 mt-2 font-light border rounded-md focus:outline-none focus:ring-2 focus:border-none ring-blue-500"
               name="message"
             ></textarea>
