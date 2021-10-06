@@ -1,8 +1,8 @@
 import * as types from "../types";
 
 const initialState = {
-  name: "Blog",
-  message: "Hi this is my blog page",
+  name: "Victor Ughonu's articles",
+  message: "Select any article to read",
 };
 
 function authReducer(state = initialState, action) {

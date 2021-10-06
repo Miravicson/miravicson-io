@@ -14,10 +14,11 @@ export default function Contact() {
           <div className="md:ml-4">
             <header className="">
               <h1 className="text-2xl font-semibold text-gray-50">
-                Get in touch, let's talk.
+                Get in touch, let&lsquo;s talk.
               </h1>
               <p className="mt-2 text-base font-light text-gray-200">
-                Fill in the details and I'll get back to you as soon as I can.
+                Fill in the details and I&lsquo;ll get back to you as soon as I
+                can.
               </p>
             </header>
             <div className="inline-flex flex-col my-20 icons-container">
@@ -71,7 +72,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex flex-row space-x-8 social-icons">
-              <a
+              {/* <a
                 href={userData.socialLinks.facebook}
                 className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer hover:bg-blue-500"
               >
@@ -88,7 +89,7 @@ export default function Contact() {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
+              </a> */}
               <a
                 href={userData.socialLinks.twitter}
                 className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer hover:bg-blue-500"

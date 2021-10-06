@@ -38,6 +38,7 @@ export default function FavouriteProjects() {
           <a
             href="https://natours-miravicson.netlify.app/"
             target="_blank"
+            rel="noreferrer"
             className="block w-full col-span-3 shadow-2xl"
           >
             <div className="relative overflow-hidden">
@@ -60,6 +61,7 @@ export default function FavouriteProjects() {
             href="https://nexter-miravicson.netlify.app"
             target="_blank"
             className="block w-full col-span-3 shadow-2xl sm:col-span-2"
+            rel="noreferrer"
           >
             <div className="relative overflow-hidden">
               {/* <BlackOverlay /> */}
@@ -81,6 +83,7 @@ export default function FavouriteProjects() {
             href="https://mallbly.com"
             target="_blank"
             className="block object-cover w-full col-span-3 sm:col-span-1"
+            rel="noreferrer"
           >
             <div className="relative overflow-hidden shadow-2xl">
               <img

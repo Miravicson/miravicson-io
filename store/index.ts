@@ -10,11 +10,9 @@ import {
 import thunk from 'redux-thunk';
 import { createWrapper, HYDRATE, Context } from 'next-redux-wrapper';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import auth from './reducers/auth';
-import blog from './reducers/blog';
-import routes from './reducers/routes';
+import articles from './reducers/articles';
 
-const rootReducer = combineReducers({ auth, blog, routes });
+const rootReducer = combineReducers({  articles });
 /**
  *
  * @param {*} middleware
