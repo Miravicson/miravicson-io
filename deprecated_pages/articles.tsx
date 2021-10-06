@@ -1,19 +1,18 @@
 import { connect } from 'react-redux';
 import Header from '@components/BlogHeader';
-import BlogLists from '../components/BlogList';
-import CustomHead from '../components/deprecated/custom-head';
+import BlogLists from '@components/BlogList';
 import { getSortedPostsData } from '../lib/api';
+import ContainerBlock from '@components/ContainerBlock';
 
-function Blog({ name, message, allPostData }) {
+function Articles({ name, message, allPostData }) {
   return (
-    <section className={`h-full min-w-full`}>
-      <CustomHead
-        title="Victor Ughonu's blog"
-        description="Where Victor Ughonu shares his thoughts about technology, life as and conversations of topical interests."
-      />
+    <ContainerBlock
+      title="Victor Ughonu's blog"
+      description="Where Victor Ughonu shares his thoughts about technology, life as and conversations of topical interests."
+    >
       <Header />
       <BlogLists posts={allPostData} />
-    </section>
+    </ContainerBlock>
   );
 }
 
@@ -33,4 +32,4 @@ export async function getStaticProps() {
   };
 }
 
-export default connect(mapStateToProps)(Blog);
+export default connect(mapStateToProps)(Articles);
