@@ -66,7 +66,7 @@ export default function AboutMe() {
               Social Links
             </h1>
             <div className="mt-4 ml-4">
-              <div className="flex flex-row items-center justify-start ">
+              {/* <div className="flex flex-row items-center justify-start ">
                 <a
                   href={userData.socialLinks.facebook}
                   className="flex flex-row items-center space-x-4 group"
@@ -77,7 +77,7 @@ export default function AboutMe() {
                     Facebook
                   </p>
                 </a>
-              </div>
+              </div> */}
               <div className="flex flex-row items-center justify-start">
                 <a
                   href={userData.socialLinks.twitter}
@@ -116,7 +116,7 @@ export default function AboutMe() {
               </div>
               <div className="flex flex-row items-center justify-start">
                 <a
-                  href={userData.socialLinks.twitter}
+                  href={userData.socialLinks.instagram}
                   className="flex flex-row items-center space-x-4 group"
                 >
                   <div className="my-4">&rarr;</div>
