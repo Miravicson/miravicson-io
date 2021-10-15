@@ -1,11 +1,16 @@
-import React from 'react';
+import Header from '@components/Header';
 import ContainerBlock from '../components/ContainerBlock';
-import Experience from '../components/Experience';
+import Work from '../components/Work';
 
-export default function experience() {
+export default function work() {
   return (
-    <ContainerBlock title="Experience - Manu Arora">
-      <Experience />
+    <ContainerBlock title="Work -- Victor Ughonu">
+      <Header>
+        <h1 className={`font-bold leading-[1] text-[1em] m-0`}>
+          Work
+        </h1>
+      </Header>
+      <Work />
     </ContainerBlock>
   );
 }

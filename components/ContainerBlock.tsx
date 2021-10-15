@@ -1,21 +1,21 @@
-import React from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
 
   const meta = {
-    title: "Victor Ughonu - Developer, AI Engineer, Programmer, Writer",
+    title: 'Victor Ughonu - Developer, AI Engineer, Programmer, Writer',
     description: `I've been developing websites for 5 years straight. Get in touch with me to know more.`,
-    image: "/img/victor-ughonu.jpg",
-    type: "website",
+    image: '/img/victor-ughonu.jpg',
+    type: 'website',
     ...customMeta,
   };
   return (
-    <div>
+    <main className="w-full max-w-[1100px] mx-auto">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -24,10 +24,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           property="og:url"
           content={`https://miravicson.com${router.asPath}`}
         />
-        <link
-          rel="canonical"
-          href={`https://miravicson.com${router.asPath}`}
-        />
+        <link rel="canonical" href={`https://miravicson.com${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Victor Ughonu" />
         <meta property="og:description" content={meta.description} />
@@ -42,11 +39,10 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta?.date} />
         )} */}
       </Head>
-      <main className="w-full pt-[5rem] dark:bg-gray-800">
-        <Navbar />
-        <div>{children}</div>
-        <Footer />
-      </main>
-    </div>
+
+      <Navbar />
+      {children}
+      <Footer />
+    </main>
   );
 }

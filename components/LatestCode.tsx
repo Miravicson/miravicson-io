@@ -10,7 +10,7 @@ export default function LatestCode({ repositories }) {
     setRepos(repositories);
   }, [repositories]);
   return (
-    <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
+    <section className=" -mt-40  pb-40">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center justify-between mx-10 md:flex-row md:pt-40">
           <h1 className="max-w-lg my-20 text-6xl font-bold text-center text-gray-500 lg:text-9xl md:my-0 md:text-white dark:text-gray-600 lg:text-left">

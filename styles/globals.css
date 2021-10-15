@@ -1,21 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import 'fonts.css';
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Inter var', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-a {
-  color: inherit;
-  text-decoration: none;
+
+
+@layer base {
+  html {
+    margin: 0px;
+    min-height: 100vh;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-bottom-background-color dark:bg-d-bottom-background-color relative text-primary-text-color dark:text-d-primary-text-color z-[-2] overflow-x-hidden px-4 md:px-[5%] font-display;
+  }
+
 }
 
-* {
-  box-sizing: border-box;
+@layer components {
+  .header-background {
+    @apply relative text-[50px] mt-[0.63em] md:text-[85px] md:mt-[0.75em];
+
+  }
+  .header-background::before {
+    @apply h-[10000px] bg-top-background-color dark:bg-d-top-background-color block absolute z-[-1] bottom-[1.5rem] right-[-10000px] left-[-10000px] md:bottom-[2.5rem];
+    content: "";
+  }
 }

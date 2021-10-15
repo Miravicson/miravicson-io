@@ -3,27 +3,25 @@ import userData from '@constants/data';
 
 export default function Projects() {
   return (
-    <section className="bg-white dark:bg-gray-800">
-      <div className="h-48 max-w-6xl mx-auto bg-white dark:bg-gray-800">
-        <h1 className="py-20 text-5xl font-bold text-center md:text-9xl md:text-left">
-          Projects
-        </h1>
-      </div>
-      {/* Grid starts here */}
-      <div className="bg-[#F1F1F1] dark:bg-gray-900">
-        <div className="grid max-w-6xl grid-cols-1 gap-8 py-20 pb-40 mx-auto md:grid-cols-2">
-          {userData.projects.map((proj, idx) => (
-            <ProjectCard
-              key={idx}
-              title={proj.title}
-              link={proj.link}
-              imgUrl={proj.imgUrl}
-              number={`${idx + 1}`}
-            />
-          ))}
-        </div>
-      </div>
+    <section className={`py-10 min-h-[calc(95vh-364px)]`}>
+      <h1 className="max-w-lg text-6xl font-bold  self-start lg:text-9xl md:my-0 text-subdued-elements-color dark:text-d-subdued-elements-color leading-[1] mb-[-3rem]">
+        Coming Soon...
+      </h1>
     </section>
+    // <section>
+    //   {/* Grid starts here */}
+    //   <div className="grid max-w-6xl grid-cols-1 gap-8 py-20 pb-40 mx-auto md:grid-cols-2">
+    //     {userData.projects.map((proj, idx) => (
+    //       <ProjectCard
+    //         key={idx}
+    //         title={proj.title}
+    //         link={proj.link}
+    //         imgUrl={proj.imgUrl}
+    //         number={`${idx + 1}`}
+    //       />
+    //     ))}
+    //   </div>
+    // </section>
   );
 }
 

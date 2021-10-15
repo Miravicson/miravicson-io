@@ -4,32 +4,12 @@ import BlackOverlay from './BlackOverlay';
 
 export default function FavouriteProjects() {
   return (
-    <div className="bg-[#F1F1F1] md:-mt-40 dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto">
-        <header className="flex flex-col items-center justify-between pt-40 mx-10 md:flex-row md:my-20 lg:my-0">
-          <h1 className="max-w-lg my-20 text-6xl font-bold text-center text-gray-500 lg:text-9xl md:my-0 md:text-white dark:text-gray-600">
-            Favourite Projects
+    <div>
+      <div>
+        <header className="flex flex-col items-center justify-between py-10 md:flex-row md:my-20 lg:my-0">
+          <h1 className="max-w-lg text-6xl font-bold  self-start lg:text-9xl md:my-0 text-subdued-elements-color dark:text-d-subdued-elements-color leading-[1] mb-[-3rem]">
+            Selected Projects
           </h1>
-          <Link href="/work">
-            <a className="flex flex-row items-center px-8 py-4 mb-20 space-x-4 text-xl font-semibold bg-white rounded-md shadow-lg md:mb-0 dark:text-gray-700">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-up-right-square"
-                stroke="4"
-                strokeWidth="4"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
-                />
-              </svg>
-              <p>View all</p>
-            </a>
-          </Link>
         </header>
 
         {/* Grid starts here */}
@@ -99,6 +79,26 @@ export default function FavouriteProjects() {
               </h1>
             </div>
           </a>
+          <Link href="/projects">
+            <a className="flex flex-row items-center px-8 py-4 mb-20 space-x-4 text-xl font-semibold bg-white rounded-md shadow-lg md:mb-0 dark:text-gray-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-up-right-square"
+                stroke="4"
+                strokeWidth="4"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
+                />
+              </svg>
+              <p>View all</p>
+            </a>
+          </Link>
         </div>
       </div>
     </div>
