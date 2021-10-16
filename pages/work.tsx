@@ -4,13 +4,11 @@ import Work from '../components/Work';
 
 export default function work() {
   return (
-    <ContainerBlock title="Work -- Victor Ughonu">
+    <>
       <Header>
-        <h1 className={`font-bold leading-[1] text-[1em] m-0`}>
-          Work
-        </h1>
+        <h1 className={`font-bold leading-[1] text-[1em] m-0`}>Work</h1>
       </Header>
       <Work />
-    </ContainerBlock>
+    </>
   );
 }

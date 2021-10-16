@@ -32,19 +32,19 @@ export default function Navbar() {
 
         <div className="flex flex-row items-center space-x-3">
           <a
-            href={userData.socialLinks.instagram}
+            href={userData.socialLinks.instagram.link}
             className="text-base font-normal text-primary-text-color dark:text-d-primary-text-color"
           >
             <InstagramLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
           </a>
           <a
-            href={userData.socialLinks.twitter}
+            href={userData.socialLinks.twitter.link}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
             <TwitterLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
           </a>
           <a
-            href={userData.socialLinks.linkedin}
+            href={userData.socialLinks.linkedin.link}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
             <LinkedInLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
