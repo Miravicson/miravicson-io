@@ -1,15 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import BlackOverlay from './BlackOverlay';
+import SubDuedHeader from './SubDuedHeader';
 
-export default function FavouriteProjects() {
+export default function SelectedProjects() {
   return (
     <div>
       <div>
-        <header className="flex flex-col items-center justify-between py-10 md:flex-row md:my-20 lg:my-0">
-          <h1 className="max-w-lg text-6xl font-bold  self-start lg:text-9xl md:my-0 text-subdued-elements-color dark:text-d-subdued-elements-color leading-[1] mb-[-3rem]">
-            Selected Projects
-          </h1>
+        <header className="flex flex-col items-center justify-between md:flex-row ">
+          <SubDuedHeader>Selected Projects</SubDuedHeader>
         </header>
 
         {/* Grid starts here */}
@@ -22,7 +20,6 @@ export default function FavouriteProjects() {
             className="block w-full col-span-3 shadow-2xl"
           >
             <div className="relative overflow-hidden">
-              {/* <BlackOverlay /> */}
               <img
                 src="/img/natours.jpg"
                 alt="Victor Ughonu natours portfolio"

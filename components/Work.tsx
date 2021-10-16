@@ -1,5 +1,6 @@
 import userData from '@constants/data';
 import React from 'react';
+import SubDuedHeader from './SubDuedHeader';
 
 export default function Work() {
   return <ExperienceCardList />;
@@ -22,7 +23,7 @@ function ExperienceCardList() {
               <div className="relative z-10 w-4 h-4 bg-green-500 rounded-full">
                 <div className="relative z-10 w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
               </div>
-              <div className="w-1 h-24 -mt-2 bg-gray-200 rounded-full dark:bg-gray-500"></div>
+              <div className="w-1 h-24 sm:h-[10rem] -mt-2 bg-gray-200 rounded-full dark:bg-gray-500"></div>
             </div>
           )}
         </React.Fragment>
@@ -33,15 +34,25 @@ function ExperienceCardList() {
 
 const ExperienceCard = ({ title, desc, year, company, companyLink }) => {
   return (
-    <div className="relative z-10 p-4 mx-4 bg-white border rounded-md shadow-xl experience-card dark:bg-gray-800">
-      <h1 className="absolute text-4xl font-bold text-gray-200 -top-10 md:-left-10 md:-top-10 dark:text-gray-800">
-        {year}
-      </h1>
-      <h1 className="text-xl font-semibold">{title}</h1>
-      <a href={companyLink} className="text-gray-500">
-        {company}
-      </a>
-      <p className="my-2 text-gray-600 dark:text-gray-400">{desc}</p>
-    </div>
+    <React.Fragment>
+      <div className="relative z-10 p-4 mx-4 bg-white border rounded-md shadow-xl experience-card dark:bg-gray-800">
+        <SubDuedHeader
+          className={`absolute sm:hidden text-4xl font-bold -top-10 md:-left-10 md:-top-10 `}
+        >
+          {year}
+        </SubDuedHeader>
+        <SubDuedHeader
+          className={`absolute hidden sm:block left-[20rem] top-[-6rem] z-[-30] `}
+        >
+          {year}
+        </SubDuedHeader>
+
+        <h1 className="text-xl font-semibold">{title}</h1>
+        <a href={companyLink} className="text-gray-500">
+          {company}
+        </a>
+        <p className="my-2 text-gray-600 dark:text-gray-400">{desc}</p>
+      </div>
+    </React.Fragment>
   );
 };

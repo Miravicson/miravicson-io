@@ -49,11 +49,12 @@ const userData = {
     // },
   ],
   about: {
-    title: `I am a fullstack developer proficient in React and associated technologies. I write primarily NodeJs for backend applications and I am both proficient in SQL and NoSQL backend solutions; allowing the related task guide my choice. When I build machine learning solutions, I prefer to deploy on servers powered by either Django or Flask frameworks or both as the case may be`,
+    title: `I am a Senior Full-Stack Developer at Kudi.com. I lead the design and development of Internal Tools used to empower my colleagues to be productive. I am passionate about Artificial Intelligence and Deep Learning. In my spare time, you would find me training an AI model or trying to beat my record score on Kaggle.`,
     description: [
-      `Professional Backend web developer. Proficient in NodeJs and Python for backend and adept in building scalable, maintainable and well-tested user interfaces using React. Developed backend API serving a Fintech Android application used by about 10000 active users. Built an internal dashboard for monitoring, tracking and reconciling transactions, settling disputes, and generating financial reports.  Developed guidelines for code quality and reviewed PRs to enforce standards.`,
-      `In the real world, problems arise in forms that are not evidently amenable to just one form of technology. A successful problem solver is fluid in choosing his tools; allowing the context and      constraints of the problem dictate his repertoire. These idea has enabled me acquire both extensive knowledge in varying technological field while solving problems from hardware to mobile applications, to the Internet of Things and to the topical Artificial Intelligence space. It&quot;s all about proffering  effective solutions to help humanity`,
-      `What about specialization? I specialize in taking product ideas from the white board to an MVP stage at the same time laying a solid foundation for scaling these products. Being adept in a wide range of technology stack allows me to compare efficiently technology stacks for your project and recommend the most suitable technology for your stack.`,
+      `The solutions I have built have enabled real-time monitoring of transaction flow, easy and efficient creation, tracking and resolution of financial issues. With some of the APIs and Dashboard I have built, I have empowered customers to resolve issues themselves on their phones. Because I am passionate about users having the best experience, I developed an Intelligent system that automatically classifies issue tickets and resolves them as soon as they are logged.`,
+      `I have a wealth of tech background. I was the geeky Electronic Engineering student, who often was seen fiddling with a micro-controller or an actuator or thinking about how everything could be made a node in an Internet of Things network. As an AI developer and Intel Innovator, I  have gained a significant level of experience from leading and teaching a community of AI developers. I have acquired senior-level experience on full stack technologies over about six years. In these years, I have embraced challenging problems and learned the beautiful art of building APIs that work and are well documented and tested alongside the art of building pixel perfect  intuitive user interfaces that keep users engaged.`,
+      `Recently, I have taken an Interest in iOS and MacOS eco system. I find the technologies elegant and the Apple community helpful. Needless to say that I have been very productive and my learning experience has been fun and fast. I can't wait to share exciting iOS and MacOS applications I will be building with you. 
+Do stay tuned to the articles page, you will be glad you did.`,
     ],
     currentProject: 'Mairmoire',
     currentProjectUrl: 'https://mairmoire-git-main-miravicson.vercel.app',
@@ -62,7 +63,7 @@ const userData = {
     {
       title: 'Senior Full-Stack Software Developer',
       company: 'Kudi',
-      year: '2019 - Present',
+      year: '2021',
       companyLink: 'https://kudi.com',
       desc: 'Collaborated with UI/UX Designer to build an In-house React/Node Js dashboard to enable colleagues monitor and reconcile transactions, resolve issues transaction related issues from the mobile application and reconcile transaction statements from financial partners. Reduced the time taken to resolve and reconcile transactions from a week to 3 seconds',
     },
@@ -92,10 +93,13 @@ const userData = {
   resumeUrl:
     'https://drive.google.com/file/d/1xmE3BOmgM7TAOOgVp36xQIQvYDntDYoo/view?usp=sharing',
   socialLinks: {
-    instagram: 'https://instagram.com/miravicson',
-    twitter: 'https://twitter.com/miravicson',
-    linkedin: 'https://linkedin.com/in/victor-ughonu',
-    github: 'https://github.com/miravicson',
+    instagram: { link: 'https://instagram.com/miravicson', name: 'Instagram' },
+    twitter: { link: 'https://twitter.com/miravicson', name: 'Twitter' },
+    linkedin: {
+      link: 'https://linkedin.com/in/victor-ughonu',
+      name: 'LinkedIn',
+    },
+    github: { link: 'https://github.com/miravicson', name: 'Github' },
   },
 };
 

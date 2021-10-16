@@ -5,8 +5,8 @@ import Header from './Header';
 export default function Hero() {
   return (
     <Header>
-      <div className="flex flex-row items-start max-w-6xl mx-auto overflow-hidden md:justify-between">
-        <div className="w-1/2  md:w-3/5 md:text-left lg:p-10">
+      <div className="flex flex-row items-start mx-auto md:justify-between">
+        <div className=" lg:w-4/6 bmd:text-left">
           <h1 className={`font-bold leading-[1] text-[1em] m-0`}>
             Writer.
             <br />
@@ -18,15 +18,15 @@ export default function Hero() {
           </h1>
         </div>
         {/* Image container */}
-        <div className="relative hidden w-full mt-20 lg:block md:w-2/5">
-          <div className="w-[90%]">
+        <div className="relative hidden w-full sm:block sm:left-[1vw] sm:top-[calc(-1rem+5vw)] md:top-[4rem] bmd:left-[2vw] 2xl:w-2/6 2xl:left-[12rem]">
+          <div className="w-full transform sm:scale-[0.9] bmd:scale-[1]">
             <img
               src={userData.avatarUrl}
               alt="victor ughonu"
-              className="shadow "
+              className="rounded-full shadow-lg bmd:rounded-none "
             />
-            <div className="flex flex-row justify-between mt-4">
-              <div className="flex flex-row space-x-4">
+            <div className="flex flex-row justify-between mt-4 transform translate-x-10 bmd:transform-none">
+              <div className="flex flex-row space-x-2 md:space-x-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -6,6 +7,16 @@ module.exports = {
     // backgroundColor: (theme) => ({
     //   ...theme('colors'),
     // }),
+    screens: {
+      xxs: '320px',
+      xs: '481px',
+      sm: '640px',
+      md: '768px',
+      bmd: '992px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     fontFamily: {
       display: ['Graphik', 'Arial', 'sans-serif', 'system-ui'],
       special: ['"GT Pressura Mono"', 'monospace'],

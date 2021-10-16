@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import userData from '@constants/data';
+import SubDuedHeader from './SubDuedHeader';
 // import getLatestRepos from '@lib/getLatestRepos';
 export default function LatestCode({ repositories }) {
   const [repos, setRepos] = useState([]);
@@ -10,13 +11,10 @@ export default function LatestCode({ repositories }) {
     setRepos(repositories);
   }, [repositories]);
   return (
-    <section className=" -mt-40  pb-40">
+    <section className="pb-40 -mt-40 ">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center justify-between mx-10 md:flex-row md:pt-40">
-          <h1 className="max-w-lg my-20 text-6xl font-bold text-center text-gray-500 lg:text-9xl md:my-0 md:text-white dark:text-gray-600 lg:text-left">
-            Latest Code
-          </h1>
-
+          <SubDuedHeader>Latest Code</SubDuedHeader>
           <a
             href={`https://github.com/${userData.githubUsername}`}
             className="flex flex-row items-center px-8 py-4 mb-20 space-x-4 text-xl font-semibold bg-white rounded-md shadow-lg md:mb-0 dark:text-gray-700"

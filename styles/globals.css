@@ -19,13 +19,27 @@
 
 }
 
+@layer utilities {
+  .full-page-width {
+    @apply -mx-4 md:mx-[-5%] w-[100vw];
+
+  }
+}
+
 @layer components {
   .header-background {
-    @apply relative text-[50px] mt-[0.63em] md:text-[85px] md:mt-[0.75em];
+    @apply relative text-[calc(30px+4.0vw)] mt-[0.6em] xs:text-[calc(35px+4vw)] sm:text-[calc(50px+3vw)] md:text-[calc(50px+3.2vw)] md:mt-[0.75em] bmd:mt-[1.25em] bmd:text-[calc(55px+3.5vw)] mb-[1.5rem] sm:mb-[2.5rem] md:mb-[6.5rem];
 
   }
   .header-background::before {
-    @apply h-[10000px] bg-top-background-color dark:bg-d-top-background-color block absolute z-[-1] bottom-[1.5rem] right-[-10000px] left-[-10000px] md:bottom-[2.5rem];
+    @apply h-[10000px] bg-top-background-color dark:bg-d-top-background-color block absolute z-[-1] bottom-[1.5rem] right-[-10000px] left-[-10000px] md:bottom-[2.5rem] bmd:bottom-[4rem];
     content: "";
+  }
+
+  .floated-profile-picture {
+    @apply float-right transform translate-x-[1.5rem]  h-[25rem] md:h-[20rem] hidden sm:block ;
+    clip-path: inset(0 0 2% 0);
+    shape-outside: inset(0 0 2% 0);
+
   }
 }

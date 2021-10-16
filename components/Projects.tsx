@@ -1,27 +1,23 @@
 import React from 'react';
 import userData from '@constants/data';
+import SubDuedHeader from './SubDuedHeader';
 
 export default function Projects() {
   return (
-    <section className={`py-10 min-h-[calc(95vh-364px)]`}>
-      <h1 className="max-w-lg text-6xl font-bold  self-start lg:text-9xl md:my-0 text-subdued-elements-color dark:text-d-subdued-elements-color leading-[1] mb-[-3rem]">
-        Coming Soon...
-      </h1>
+    <section className={`min-h-[calc(95vh-364px)]`}>
+      <SubDuedHeader>Coming Soon...</SubDuedHeader>
+      <div className="grid max-w-6xl grid-cols-1 gap-8 py-20 pb-40 mx-auto md:grid-cols-2">
+        {userData.projects.map((proj, idx) => (
+          <ProjectCard
+            key={idx}
+            title={proj.title}
+            link={proj.link}
+            imgUrl={proj.imgUrl}
+            number={`${idx + 1}`}
+          />
+        ))}
+      </div>
     </section>
-    // <section>
-    //   {/* Grid starts here */}
-    //   <div className="grid max-w-6xl grid-cols-1 gap-8 py-20 pb-40 mx-auto md:grid-cols-2">
-    //     {userData.projects.map((proj, idx) => (
-    //       <ProjectCard
-    //         key={idx}
-    //         title={proj.title}
-    //         link={proj.link}
-    //         imgUrl={proj.imgUrl}
-    //         number={`${idx + 1}`}
-    //       />
-    //     ))}
-    //   </div>
-    // </section>
   );
 }
 

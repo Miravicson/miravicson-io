@@ -8,15 +8,15 @@ import ThemeToggleButton from './ThemeToggleButton';
 
 export default function Navbar() {
   return (
-    <div className="mt-8  md:py-15">
+    <div className="mt-8  md:mt-[5vw] bmd:mt-[10vw]">
       <div className="flex items-center justify-between md:flex-row">
         <div className="flex flex-col">
           <Link href="/">
             <a>
-              <h1 className="text-base md:text-xl font-medium leading-[1.3]">
+              <h1 className="text-base md:text-[1.125rem] md:leading-[1.3] font-medium leading-[1.3]">
                 {userData.name}
               </h1>
-              <p className="text-base font-light leading-[1.3] ">
+              <p className="text-base font-light leading-[1.3] md:text-[1.125rem] md:leading-[1.3]">
                 {userData.designation}
               </p>
             </a>
@@ -30,31 +30,31 @@ export default function Navbar() {
           <NavLink path="/about" name="About" />
         </div>
 
-        <div className="flex flex-row items-center space-x-4">
+        <div className="flex flex-row items-center space-x-3">
           <a
             href={userData.socialLinks.instagram}
-            className="text-base font-normal text-gray-600 dark:text-gray-300"
+            className="text-base font-normal text-primary-text-color dark:text-d-primary-text-color"
           >
-            <InstagramLogo />
+            <InstagramLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
           </a>
           <a
             href={userData.socialLinks.twitter}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <TwitterLogo />
+            <TwitterLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
           </a>
           <a
             href={userData.socialLinks.linkedin}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <LinkedInLogo />
+            <LinkedInLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
           </a>
           <ThemeToggleButton />
         </div>
       </div>
 
       {/* Mobile Nav links */}
-      <div className="flex mt-8 w-full justify-between md:hidden">
+      <div className="flex justify-between w-full mt-8 md:hidden">
         <NavLink path="/articles" name="Articles" />
         <NavLink path="/work" name="Work" />
         <NavLink path="/projects" name="Projects" />

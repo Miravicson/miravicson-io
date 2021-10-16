@@ -1,119 +1,58 @@
 import React from 'react';
 import userData from '@constants/data';
+import SocialLink from './SocialLink';
+
+function SocialLinks({ className }: { className?: string }) {
+  return (
+    <div className={`hidden md:block`}>
+      <h1 className="mt-8 text-xl font-semibold">
+        Social Links
+      </h1>
+      <div className={`mt-4 ml-4 ${className}`}>
+        {Object.values(userData.socialLinks).map((socialLink) => (
+          <SocialLink key={socialLink.name} {...socialLink} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function AboutMe() {
   return (
     <section>
-      <div className="pt-10 mx-auto text-container">
-        <p className="text-2xl font-semibold leading-[1.5] md:text-4xl">
-          {userData.about.title}. Currently working on{' '}
-          <a
-            className="px-2 py-1 text-white bg-red-500 rounded-md"
-            href={userData.about.currentProjectUrl}
-          >
-            {userData.about.currentProject} ✈️
-          </a>
+      <div className="mx-auto text-container">
+        <p className="text-2xl font-medium leading-[1.5] md:text-4xl">
+          {userData.about.title}
         </p>
       </div>
 
+      <div className="relative w-full mt-[1.5rem] full-page-width sm:hidden">
+        <figure className="w-full">
+          <img
+            src={userData.avatarUrl}
+            alt="victor ughonu"
+            className="object-cover w-full shadow-lg"
+          />
+        </figure>
+      </div>
+
       <div>
-        <div className="grid max-w-6xl grid-cols-1 pt-20 mx-auto md:grid-cols-3 gap-y-20 gap-x-20">
-          {/* Social Buttons */}
+        <div className="grid max-w-6xl grid-cols-1 mx-auto lg:pt-20 md:grid-cols-3 gap-y-20 gap-x-20">
           <div className="inline-flex flex-col">
-            {/* <div>
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                Contact
-              </h1>
-              <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
-                For any sort help / enquiry, shoot a{" "}
-                <a
-                  href={`mailto:${userData.email}`}
-                  className="font-bold text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 dark:text-gray-300"
-                >
-                  mail
-                </a>{" "}
-                and I'll get back. I swear.
-              </p>
-            </div> */}
-            {/* <div className="mt-8">
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                Job Opportunities
-              </h1>
-              <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
-                I'm looking for a job currently, If you see me as a good fit,
-                check my{" "}
-                <a
-                  href={userData.resumeUrl}
-                  target="__blank"
-                  className="font-bold text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 dark:text-gray-300"
-                >
-                  CV
-                </a>{" "}
-                and I'd love to work for you.
-              </p>
-            </div> */}
-            {/* Social Links */}
-            <h1 className="mt-8 text-xl font-semibold text-gray-700 dark:text-gray-200">
-              Social Links
-            </h1>
-            <div className="mt-4 ml-4">
-              <div className="flex flex-row items-center justify-start">
-                <a
-                  href={userData.socialLinks.twitter}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="relative overflow-hidden font-mono text-lg text-gray-500 dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    Twitter
-                  </div>
-                </a>
-              </div>
-              <div className="flex flex-row items-center justify-start">
-                <a
-                  href={userData.socialLinks.github}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="relative overflow-hidden font-mono text-lg text-gray-500 dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    GitHub
-                  </div>
-                </a>
-              </div>
-              <div className="flex flex-row items-center justify-start">
-                <a
-                  href={userData.socialLinks.linkedin}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="relative overflow-hidden font-mono text-lg text-gray-500 dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    LinkedIn
-                  </div>
-                </a>
-              </div>
-              <div className="flex flex-row items-center justify-start">
-                <a
-                  href={userData.socialLinks.instagram}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="relative overflow-hidden font-mono text-lg text-gray-500 dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-28 group-hover:translate-x-0 transition duration-300"></div>
-                    Instagram
-                  </div>
-                </a>
-              </div>
-            </div>
+            <SocialLinks />
           </div>
           {/* Text area */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 mt-4 md:col-span-2">
+            <figure className="floated-profile-picture">
+              <img
+                src={userData.avatarUrl}
+                alt="victor ughonu"
+                className="h-full shadow-lg "
+              />
+            </figure>
+
             {userData.about.description?.map((desc, idx) => (
-              <p
-                key={idx}
-                className="mb-4 text-xl text-gray-700 dark:text-gray-300 "
-              >
+              <p key={idx} className="mb-4 text-[1.125rem] leading-[1.7]">
                 {desc}
               </p>
             ))}
