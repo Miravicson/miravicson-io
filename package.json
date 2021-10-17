@@ -40,6 +40,7 @@
     "slugify": "^1.4.6"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.175",
     "@types/react": "^17.0.27",
     "autoprefixer": "^10.3.7",
     "eslint": "7.32.0",

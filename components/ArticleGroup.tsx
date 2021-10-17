@@ -1,4 +1,4 @@
-import { ArticleList as ArticleListClass, IArticle } from '@constants/articles';
+import { IArticle } from '@constants/articles';
 import React, { ReactElement } from 'react';
 import ReadMoreButton from './ReadMoreButton';
 import SubDuedHeader from './SubDuedHeader';
@@ -6,8 +6,6 @@ import orderBy from 'lodash/orderBy';
 import groupBy from 'lodash/groupBy';
 import Link from 'next/link';
 import { compareDesc } from 'date-fns';
-
-function sortByTime(day1, day2) {}
 
 interface Props {
   articles: Omit<IArticle, 'body'>[];
@@ -17,7 +15,7 @@ function ArticleCardContainer({
   children,
   articles,
 }: {
-  children(value: Omit<IArticle, 'body'>[]);
+  children(value: Omit<IArticle, 'body'>[]): React.ReactElement[];
   articles: Omit<IArticle, 'body'>[];
 }) {
   const sortedArticles = articles.sort((article1, article2) =>
@@ -65,8 +63,8 @@ function ArticlesByYearSection({
       </SubDuedHeader>
 
       <ArticleCardContainer articles={articleByYear[1]}>
-        {() => {
-          return articleByYear[1].map((article) => {
+        {(articles: Omit<IArticle, 'body'>[]) => {
+          return articles.map((article) => {
             return (
               <Link key={article.slug} href={`/articles/${article.slug}`}>
                 <a>
@@ -86,7 +84,7 @@ function ArticleGroup({ articles }: Props): ReactElement {
     new Date(article.date).getFullYear()
   );
 
-  groupedArticles = orderBy(
+  let groupedArticlesByYear: [string, [Omit<IArticle, "body">, ...Omit<IArticle, "body">[]]][] = orderBy(
     Object.entries(groupedArticles),
     [(articleEntry) => articleEntry[0]],
     ['desc']
@@ -94,7 +92,7 @@ function ArticleGroup({ articles }: Props): ReactElement {
 
   return (
     <section className={`space-y-4`}>
-      {groupedArticles.map((articleByYear) => {
+      {groupedArticlesByYear.map((articleByYear) => {
         return (
           <ArticlesByYearSection
             articleByYear={articleByYear}
