@@ -9,7 +9,18 @@ import ArticleHeader from '@components/ArticleHeader';
 import ArticleBullet from '@components/ArticleBullet';
 import ArticleHighlight from '@components/ArticleHighlight';
 import ArticleImage from '@components/ArticleImage';
+import dynamic from 'next/dynamic';
 import { getFrontMatterAndContent, getPostStaticPaths } from '@lib/api';
+
+const components = {
+  SyntaxHighlighter,
+  Button: dynamic(() => import('../../components/Button')),
+  ArticleParagraph: dynamic(() => import('../../components/ArticleParagraph')),
+  ArticleHeader: dynamic(() => import('../../components/ArticleHeader')),
+  ArticleBullet: dynamic(() => import('../../components/ArticleBullet')),
+  ArticleHighlight: dynamic(() => import('../../components/ArticleHighlight')),
+  ArticleImage: dynamic(() => import('../../components/ArticleImage')),
+};
 
 export default function ArticleDetail({ frontMatter, mdxSource }) {
   const { title, date } = frontMatter;
@@ -31,18 +42,7 @@ export default function ArticleDetail({ frontMatter, mdxSource }) {
       </Header>
       <section className={`ssm:grid ssm:grid-cols-article`}>
         <div className={`ssm:col-start-2`}>
-          <MDXRemote
-            {...mdxSource}
-            components={{
-              Button,
-              SyntaxHighlighter,
-              ArticleParagraph,
-              ArticleHeader,
-              ArticleBullet,
-              ArticleHighlight,
-              ArticleImage,
-            }}
-          />
+          <MDXRemote {...mdxSource} components={components} />
         </div>
       </section>
     </>
