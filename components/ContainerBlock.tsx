@@ -6,10 +6,6 @@ import Footer from './Footer';
 import _ from 'lodash';
 import { useTheme } from 'next-themes';
 
-if (global.window) {
-  window._ = _;
-}
-
 export interface IContainerBlockState {
   title?: string;
   description?: string;
