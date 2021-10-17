@@ -3,11 +3,11 @@ const globby = require("globby");
 
 async function generateSiteMap() {
   const pages = await globby([
-    "pages/**/**.js",
-    "!pages/_*.js",
-    "!pages/**/[id].js",
+    "pages/**/**.ts",
+    "!pages/_*.ts",
+    "!pages/**/[id].ts",
     "!pages/api",
-    "!_posts/*.md",
+    "!posts/*.mdx",
   ]);
   const sitemap = `
       <?xml version="1.0" encoding="UTF-8"?>
@@ -16,8 +16,8 @@ async function generateSiteMap() {
             .map((page) => {
               const path = page
                 .replace("pages", "")
-                .replace(".js", "")
-                .replace(".md", "");
+                .replace(".ts", "")
+                .replace(".mdx", "");
               const route = path === "/index" ? "" : path;
 
               return `
