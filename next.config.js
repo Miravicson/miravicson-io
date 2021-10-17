@@ -1,6 +1,6 @@
 const path = require('path');
 const withImages = require('next-images');
-// const withMDX = require('@next/mdx')();
+const withMDX = require('@next/mdx')();
 // module.exports = withMDX(
 //   withImages({
 //     sassOptions: {
@@ -34,10 +34,10 @@ const withImages = require('next-images');
 //   })
 // );
 
-// module.exports = withMDX();
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-});
-module.exports = withMDX({
-  pageExtensions: ['ts', 'tsx', 'mdx'],
-});
+module.exports = withMDX();
+// const withMDX = require('@next/mdx')({
+//   extension: /\.mdx?$/,
+// });
+// module.exports = withMDX({
+//   pageExtensions: ['ts', 'tsx', 'mdx'],
+// });
