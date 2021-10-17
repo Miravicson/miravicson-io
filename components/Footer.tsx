@@ -26,7 +26,7 @@ export default function Footer({ className }: { className?: string }) {
           </div>
           <div className="flex flex-row items-center space-x-4">
             <a
-              href={userData.socialLinks.instagram}
+              href={userData.socialLinks.instagram.link}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <svg
@@ -41,7 +41,7 @@ export default function Footer({ className }: { className?: string }) {
               </svg>
             </a>
             <a
-              href={userData.socialLinks.twitter}
+              href={userData.socialLinks.twitter.link}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <svg
@@ -56,7 +56,7 @@ export default function Footer({ className }: { className?: string }) {
               </svg>
             </a>
             <a
-              href={userData.socialLinks.linkedin}
+              href={userData.socialLinks.linkedin.link}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <svg
