@@ -3,6 +3,12 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import _ from 'lodash';
+import { useTheme } from 'next-themes';
+
+if (global.window) {
+  window._ = _;
+}
 
 export interface IContainerBlockState {
   title?: string;
@@ -12,49 +18,55 @@ export interface IContainerBlockState {
   date?: string;
 }
 
-const defaultMeta = {
+export const ContainerBlockContext = React.createContext<{
+  setMeta(value: IContainerBlockState): void;
+}>({
+  setMeta() {},
+});
+
+export function useSetMeta(meta: IContainerBlockState): void {
+  const { setMeta } = React.useContext(ContainerBlockContext);
+  React.useEffect(() => {
+    setMeta(meta);
+  }, [meta, setMeta]);
+}
+export const defaultMeta = {
   title: 'Victor Ughonu - Developer, AI Engineer, Programmer, Writer',
   description: `I've been developing websites for 6 years straight. Get in touch with me to know more.`,
   image: '/img/victor-ughonu.jpg',
   type: 'website',
 };
 
-export const ContainerBlockContext = React.createContext<{
-  meta: IContainerBlockState;
-  setMeta(value: IContainerBlockState): void;
-}>({
-  meta: defaultMeta,
-  setMeta() {},
-});
-
-export function useContainerBlock() {
-  return React.useContext(ContainerBlockContext);
-}
-
-export function useSetMeta(meta: IContainerBlockState): void {
-  const { setMeta } = useContainerBlock();
-  React.useEffect(() => {
-    setMeta(meta);
-  }, [meta, setMeta]);
-}
-
-export default function ContainerBlock({ children, ...customMeta }) {
+export default function ContainerBlock({ children }) {
   const router = useRouter();
+  const { theme } = useTheme();
+  const pathRef = React.useRef('/');
   const [meta, metaSet] = React.useState<IContainerBlockState>(defaultMeta);
 
-  const setMeta = React.useCallback((metaObject: IContainerBlockState) => {
-    metaSet((defaultMeta) => ({ ...defaultMeta, ...metaObject }));
-  }, []);
-  const contextValue = React.useMemo(
-    () => ({ meta, setMeta }),
-    [meta, setMeta]
-  );
+  const setMeta = (metaObject: IContainerBlockState) => {
+    if (pathRef.current !== router.asPath) {
+      metaSet((defaultMeta) => ({ ...defaultMeta, ...metaObject }));
+      pathRef.current = router.asPath;
+    }
+  };
 
   return (
-    <main className="w-full max-w-[1100px] mx-auto">
+    <main className="w-full max-w-[1100px] mx-auto flex flex-col min-h-[100vh]">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
+        <meta
+          name="keywords"
+          content="Victor Ughonu, victor chiagozie ughonu, miravicson, Full-Stack Developer Artificial Intelligence Developer, Intel AI Innovator, Intel AI Ambassador"
+        />
+        <meta
+          name="author"
+          content="victor ughonu, https://www.miravicson.com"
+        />
+        <meta
+          name="theme-color"
+          content={theme === 'light' ? '#fff' : '#161616'}
+        />
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
@@ -77,10 +89,10 @@ export default function ContainerBlock({ children, ...customMeta }) {
       </Head>
 
       <Navbar />
-      <ContainerBlockContext.Provider value={contextValue}>
+      <ContainerBlockContext.Provider value={{ setMeta }}>
         {children}
       </ContainerBlockContext.Provider>
-      <Footer />
+      <Footer className={`mt-auto`} />
     </main>
   );
 }

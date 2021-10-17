@@ -40,6 +40,23 @@
     @apply float-right transform translate-x-[1.5rem]  h-[25rem] md:h-[20rem] hidden sm:block ;
     clip-path: inset(0 0 2% 0);
     shape-outside: inset(0 0 2% 0);
+  }
+  .button {
+    @apply flex items-center flex-nowrap text-[1.125rem] font-medium whitespace-nowrap justify-center py-[calc(1.25rem-1.5px)] px-[1.5rem] bg-very-subdued-elements-color dark:bg-d-very-subdued-elements-color rounded-[12px] shadow sm:shadow-sm md:shadow-md lg:shadow-lg;
+  }
 
+  .button-icon {
+    @apply flex items-center mr-[0.5rem];
+  }
+  .button-text {
+    @apply py-[1.5px] ;
+  }
+
+  p.article-paragraph + p.article-paragraph {
+    margin-top: 2.5rem;
+  }
+
+  .article-bullet li + li {
+    /* margin-top: 1.8rem; */
   }
 }

@@ -1,8 +1,10 @@
 import React from 'react';
 import userData from '@constants/data';
 import SubDuedHeader from './SubDuedHeader';
+import { defaultMeta, useSetMeta } from './ContainerBlock';
 
 export default function Projects() {
+    useSetMeta(defaultMeta);
   return (
     <section className={`min-h-[calc(95vh-364px)]`}>
       <SubDuedHeader>Coming Soon...</SubDuedHeader>

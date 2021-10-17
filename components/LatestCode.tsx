@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import userData from '@constants/data';
 import SubDuedHeader from './SubDuedHeader';
+import ViewAllButton from './ViewAllButton';
 // import getLatestRepos from '@lib/getLatestRepos';
 export default function LatestCode({ repositories }) {
   const [repos, setRepos] = useState([]);
@@ -11,41 +12,31 @@ export default function LatestCode({ repositories }) {
     setRepos(repositories);
   }, [repositories]);
   return (
-    <section className="pb-40 -mt-40 ">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center justify-between mx-10 md:flex-row md:pt-40">
-          <SubDuedHeader>Latest Code</SubDuedHeader>
-          <a
-            href={`https://github.com/${userData.githubUsername}`}
-            className="flex flex-row items-center px-8 py-4 mb-20 space-x-4 text-xl font-semibold bg-white rounded-md shadow-lg md:mb-0 dark:text-gray-700"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-arrow-up-right-square"
-              stroke="4"
-              strokeWidth="4"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
-              />
-            </svg>
-            <p>View GitHub</p>
-          </a>
-        </div>
-      </div>
-      <div className="grid max-w-6xl grid-cols-1 gap-8 px-10 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:-mt-10 gap-y-20">
-        {/* Single github Repo */}
+    <section className="pb-40 mt-[4rem]">
+      <header className={`relative z-[-1]`}>
+        <SubDuedHeader>Latest Code</SubDuedHeader>
+        <ViewAllButton
+          className={`absolute md:bottom-[1rem] lg:bottom-[6rem] z-[2] right-0 hidden md:flex`}
+          as="link"
+          link={`https://github.com/${userData.githubUsername}`}
+        >
+          View GitHub
+        </ViewAllButton>
+      </header>
 
+      <div className="grid max-w-6xl grid-cols-1 gap-8 px-10 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:-mt-10 gap-y-20">
         {repos &&
           repos.map((latestRepo, idx) => (
             <GithubRepoCard latestRepo={latestRepo} key={idx} />
           ))}
       </div>
+      <ViewAllButton
+        className={`mt-[2rem] md:hidden`}
+        as="link"
+        link={`https://github.com/${userData.githubUsername}`}
+      >
+        View GitHub
+      </ViewAllButton>
     </section>
   );
 }

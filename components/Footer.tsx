@@ -1,9 +1,9 @@
 import React from 'react';
 import userData from '@constants/data';
 
-export default function Footer() {
+export default function Footer({ className }: { className?: string }) {
   return (
-    <div className="">
+    <div className={className}>
       <div className="max-w-6xl px-4 py-10 mx-auto md:py-20">
         <div className="h-0.5 w-full bg-white dark:bg-gray-700"></div>
         <div className="flex flex-col justify-between mt-8 space-y-4 md:space-y-0 md:flex-row md:items-center">

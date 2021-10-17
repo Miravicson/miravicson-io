@@ -4,12 +4,10 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    // backgroundColor: (theme) => ({
-    //   ...theme('colors'),
-    // }),
     screens: {
       xxs: '320px',
       xs: '481px',
+      ssm: '550px',
       sm: '640px',
       md: '768px',
       bmd: '992px',
@@ -28,6 +26,7 @@ module.exports = {
         'secondary-text-color': '#777',
         'light-subdued-elements-color': '#fff',
         'subdued-elements-color': '#fff',
+        'very-subdued-elements-color': '#fff',
         'top-background-color': '#fff',
         'bottom-background-color': '#f1f1f1',
         'error-color': '#da2626',
@@ -37,22 +36,33 @@ module.exports = {
         'd-secondary-text-color': '#999',
         'd-light-subdued-elements-color': 'rgba(255, 255, 255, 0.4)',
         'd-subdued-elements-color': 'rgba(255, 255, 255, 0.15)',
+        'd-very-subdued-elements-color': 'rgba(255, 255, 255, 0.09)',
         'd-top-background-color': '#161616',
         'd-bottom-background-color': '#000',
         'd-error-color': '#ff7060',
         'd-dark-tiles': '#222',
+      },
+      gridTemplateColumns: {
+        'articles-card-container': 'repeat(auto-fill, minmax(250px, 1fr))',
+        article: '25% auto',
       },
       transitionDuration: {
         0: '0ms',
         2000: '2000ms',
         4000: '4000ms',
       },
+      lineClamp: {
+        10: '10',
+        12: '12',
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      lineClamp: ['hover', 'responsive'],
+    },
     display: ['responsive', 'group-hover', 'group-focus'],
   },
 
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

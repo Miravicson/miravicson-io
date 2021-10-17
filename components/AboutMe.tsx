@@ -52,7 +52,7 @@ export default function AboutMe() {
             </figure>
 
             {userData.about.description?.map((desc, idx) => (
-              <p key={idx} className="mb-4 text-[1.125rem] leading-[1.7]">
+              <p key={idx} className="mb-4 text-[1.125rem] leading-[1.7] break-words">
                 {desc}
               </p>
             ))}

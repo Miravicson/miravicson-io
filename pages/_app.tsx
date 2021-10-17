@@ -1,6 +1,5 @@
 import '../styles/globals.css';
 import { ThemeProvider } from 'next-themes';
-import { wrapper } from '@store';
 import React from 'react';
 import ContainerBlock from '@components/ContainerBlock';
 
@@ -14,5 +13,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default wrapper.withRedux(MyApp);
-// export default MyApp;
+export default MyApp;
