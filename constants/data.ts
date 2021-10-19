@@ -11,44 +11,46 @@ const userData = {
   address: 'Lagos, Nigeria',
   projects: [
     {
-      title: 'Tailwind Master Kit',
-      link: 'https://tailwindmasterkit.com',
-      imgUrl: '/tmk.jpg',
+      title: 'Natours UI',
+      link: 'https://natours-miravicson.netlify.app/',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634650878/miravicson.com/projects/natours-ui.png',
     },
     {
-      title: 'PlaceholderTech',
-      link: 'https://placeholdertech.in',
-      imgUrl: '/placeholdertech.png',
+      title: 'Nexter UI',
+      link: 'https://nexter-miravicson.netlify.app',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634650940/miravicson.com/projects/nexter-ui.png',
     },
     {
-      title: 'Portfolio',
-      link: 'https://manuarora.in',
-      imgUrl: '/portfolio.png',
+      title: 'Mallbly',
+      link: 'https://mallbly.com',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634651063/miravicson.com/projects/mallbly.png',
     },
     {
-      title: 'CovidRescue',
-      link: 'https://covidrescue.co.in',
-      imgUrl: '/covidrescue.png',
+      title: 'Trillo UI',
+      link: 'https://trillo-miravicson.netlify.app',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634650904/miravicson.com/projects/trillo-ui.png',
     },
     {
-      title: 'Algochurn',
-      link: 'https://algochurn.com',
-      imgUrl: '/algochurn.png',
+      title: 'Natours Node',
+      link: 'https://natours-node-miravicson.herokuapp.com',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634650891/miravicson.com/projects/natours-node.png',
     },
     {
-      title: 'Playground',
-      link: 'https://play.placeholdertech.in',
-      imgUrl: '/playground.png',
+      title: 'Task Management Application',
+      link: 'https://miravicson.github.io/task-management-frontend',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634650965/miravicson.com/projects/task-management.png',
     },
     {
-      title: 'Feedmeback',
-      link: 'https://feedmeback.vercel.app',
-      imgUrl: '/feedmeback.png',
-    },
-    {
-      title: 'Devmedium',
-      link: 'https://devmedium.vercel.app',
-      imgUrl: '/devmedium.png',
+      title: 'FeatureRester',
+      link: 'https://featurester.herokuapp.com',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634651432/miravicson.com/projects/featurester.png',
     },
   ],
   about: {

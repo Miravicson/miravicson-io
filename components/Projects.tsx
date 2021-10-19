@@ -7,8 +7,8 @@ export default function Projects() {
     useSetMeta(defaultMeta);
   return (
     <section className={`min-h-[calc(95vh-364px)]`}>
-      <SubDuedHeader>Coming Soon...</SubDuedHeader>
-      <div className="grid max-w-6xl grid-cols-1 gap-8 py-20 pb-40 mx-auto md:grid-cols-2">
+      {/* <SubDuedHeader>Coming Soon...</SubDuedHeader> */}
+      <div className="grid max-w-6xl grid-cols-1 gap-8 pb-40 mx-auto md:grid-cols-2">
         {userData.projects.map((proj, idx) => (
           <ProjectCard
             key={idx}

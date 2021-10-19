@@ -35,19 +35,19 @@ export default function Navbar() {
             href={userData.socialLinks.instagram.link}
             className="text-base font-normal text-primary-text-color dark:text-d-primary-text-color"
           >
-            <InstagramLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
+            <InstagramLogo className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
           </a>
           <a
             href={userData.socialLinks.twitter.link}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <TwitterLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
+            <TwitterLogo className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
           </a>
           <a
             href={userData.socialLinks.linkedin.link}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <LinkedInLogo className={`w-[14px] h-[14px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
+            <LinkedInLogo className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
           </a>
           <ThemeToggleButton />
         </div>

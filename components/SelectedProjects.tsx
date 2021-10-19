@@ -34,7 +34,7 @@ export default function SelectedProjects() {
                 className="transition ease-out transform hover:scale-125 duration-2000"
               />
               <h1 className="absolute px-2 text-xl font-bold bg-red-500 rounded-md top-10 left-10 text-gray-50">
-                Natours
+                Natours UI
               </h1>
               <h1 className="absolute text-xl font-bold bottom-10 left-10 text-gray-50">
                 01
