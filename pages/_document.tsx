@@ -1,6 +1,7 @@
+import userData from '@constants/data';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-const ogImage = '/img/victor-ughonu-banner-small.jpg';
+const ogImage = userData.avatarUrl;
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {

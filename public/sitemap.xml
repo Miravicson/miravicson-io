@@ -2,5 +2,29 @@
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           
+                      <url>
+                          <loc>https://www.miravicson.com/404x</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://www.miravicson.com/aboutx</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://www.miravicson.com/indexx</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://www.miravicson.com/projectsx</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://www.miravicson.com/workx</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://www.miravicson.com/articles/indexx</loc>
+                      </url>
+                  
       </urlset>
   

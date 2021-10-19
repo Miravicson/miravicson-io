@@ -2,13 +2,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import Header from '@components/Header';
-import Button from '@components/Button';
 import { format } from 'date-fns';
-import ArticleParagraph from '@components/ArticleParagraph';
-import ArticleHeader from '@components/ArticleHeader';
-import ArticleBullet from '@components/ArticleBullet';
-import ArticleHighlight from '@components/ArticleHighlight';
-import ArticleImage from '@components/ArticleImage';
 import dynamic from 'next/dynamic';
 import { getFrontMatterAndContent, getPostStaticPaths } from '@lib/api';
 

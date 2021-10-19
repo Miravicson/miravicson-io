@@ -1,7 +1,8 @@
 import React from 'react';
 import userData from '@constants/data';
 import Header from './Header';
-
+import ProgressiveImage from 'react-progressive-image';
+import Image from 'next/image';
 export default function Hero() {
   return (
     <Header>
@@ -20,12 +21,23 @@ export default function Hero() {
         {/* Image container */}
         <div className="relative hidden w-full sm:block sm:left-[1vw] sm:top-[calc(-1rem+5vw)] md:top-[4rem] bmd:left-[2vw] 2xl:w-2/6 2xl:left-[12rem]">
           <div className="w-full transform sm:scale-[0.9] bmd:scale-[1]">
-            <img
+            <ProgressiveImage
               src={userData.avatarUrl}
-              alt="victor ughonu"
-              className="rounded-full shadow-lg bmd:rounded-none "
-            />
-            <div className="flex flex-row justify-between mt-4 transform translate-x-10 bmd:transform-none">
+              placeholder={userData.avatarUrlSmall}
+  
+            >
+              {(src) => (
+                <Image
+                  src={src}
+                  alt="victor ughonu"
+                  className="rounded-full shadow-lg bmd:rounded-none "
+                  height="505"
+                  width="495"
+                />
+              )}
+            </ProgressiveImage>
+
+            <div className="flex flex-row justify-between mt-[-5px] transform translate-x-10 bmd:transform-none">
               <div className="flex flex-row space-x-2 md:space-x-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

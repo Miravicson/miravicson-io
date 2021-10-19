@@ -2,51 +2,54 @@ const userData = {
   githubUsername: 'miravicson',
   name: 'Victor Ughonu',
   designation: 'Full-Stack Developer',
-  avatarUrl: '/img/victor-ughonu-big.jpg',
+  avatarUrl:
+    'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu-big.jpg',
+  avatarUrlSmall:
+    'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu.jpg',
   email: 'victorughonu@gmail.com',
   phone: '+2348165660498',
   address: 'Lagos, Nigeria',
   projects: [
-    // {
-    //   title: "Tailwind Master Kit",
-    //   link: "https://tailwindmasterkit.com",
-    //   imgUrl: "/tmk.jpg",
-    // },
-    // {
-    //   title: "PlaceholderTech",
-    //   link: "https://placeholdertech.in",
-    //   imgUrl: "/placeholdertech.png",
-    // },
-    // {
-    //   title: 'Portfolio',
-    //   link: 'https://manuarora.in',
-    //   imgUrl: '/portfolio.png',
-    // },
-    // {
-    //   title: 'CovidRescue',
-    //   link: 'https://covidrescue.co.in',
-    //   imgUrl: '/covidrescue.png',
-    // },
-    // {
-    //   title: 'Algochurn',
-    //   link: 'https://algochurn.com',
-    //   imgUrl: '/algochurn.png',
-    // },
-    // {
-    //   title: 'Playground',
-    //   link: 'https://play.placeholdertech.in',
-    //   imgUrl: '/playground.png',
-    // },
-    // {
-    //   title: 'Feedmeback',
-    //   link: 'https://feedmeback.vercel.app',
-    //   imgUrl: '/feedmeback.png',
-    // },
-    // {
-    //   title: 'Devmedium',
-    //   link: 'https://devmedium.vercel.app',
-    //   imgUrl: '/devmedium.png',
-    // },
+    {
+      title: 'Tailwind Master Kit',
+      link: 'https://tailwindmasterkit.com',
+      imgUrl: '/tmk.jpg',
+    },
+    {
+      title: 'PlaceholderTech',
+      link: 'https://placeholdertech.in',
+      imgUrl: '/placeholdertech.png',
+    },
+    {
+      title: 'Portfolio',
+      link: 'https://manuarora.in',
+      imgUrl: '/portfolio.png',
+    },
+    {
+      title: 'CovidRescue',
+      link: 'https://covidrescue.co.in',
+      imgUrl: '/covidrescue.png',
+    },
+    {
+      title: 'Algochurn',
+      link: 'https://algochurn.com',
+      imgUrl: '/algochurn.png',
+    },
+    {
+      title: 'Playground',
+      link: 'https://play.placeholdertech.in',
+      imgUrl: '/playground.png',
+    },
+    {
+      title: 'Feedmeback',
+      link: 'https://feedmeback.vercel.app',
+      imgUrl: '/feedmeback.png',
+    },
+    {
+      title: 'Devmedium',
+      link: 'https://devmedium.vercel.app',
+      imgUrl: '/devmedium.png',
+    },
   ],
   about: {
     title: `I am a Senior Full-Stack Developer at Kudi.com. I lead the design and development of Internal Tools used to empower my colleagues to be productive. I am passionate about Artificial Intelligence and Deep Learning. In my spare time, you would find me training an AI model or trying to beat my record score on Kaggle.`,
