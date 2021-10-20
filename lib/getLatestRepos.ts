@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
-const getLatestRepos = async (data, token) => {
-  // console.log("data", data);
+const getLatestRepos = async (data): Promise<Array<unknown>> => {
+  let token = process.env.GITHUB_AUTH_TOKEN;
   try {
     const username = data.githubUsername;
 
