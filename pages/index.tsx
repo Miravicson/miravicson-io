@@ -4,7 +4,9 @@ import { useSetMeta } from '../components/ContainerBlock';
 import SelectedProjects from '../components/SelectedProjects';
 import LatestCode from '../components/LatestCode';
 import Hero from '../components/Hero';
-import getLatestRepos from '@lib/getLatestRepos';
+import getLatestRepos, {
+  getReposFromSessionStorage,
+} from '@lib/getLatestRepos';
 import userData from '@constants/data';
 
 export default function Index() {
@@ -14,7 +16,9 @@ export default function Index() {
     description: "Victor Ughonu's Home Page",
   });
 
-  const [repositories, setRepositories] = React.useState([]);
+  const [repositories, setRepositories] = React.useState(() =>
+    getReposFromSessionStorage()
+  );
 
   React.useEffect(() => {
     async function loadRepoData() {
