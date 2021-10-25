@@ -7,24 +7,22 @@ export default function LatestCode({ repositories }) {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    // let latestRepos = await getLatestRepos(userData);
-    // console.log("latestRepos", latestRepos);
     setRepos(repositories);
   }, [repositories]);
   return (
     <section className="pb-40 mt-[4rem]">
       <header className={`relative z-[-1]`}>
         <SubDuedHeader>Latest Code</SubDuedHeader>
+      </header>
+
+      <div className="relative grid max-w-6xl grid-cols-1 gap-8 px-10 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:-mt-10 gap-y-20">
         <ViewAllButton
-          className={`absolute md:bottom-[1rem] lg:bottom-[6rem] z-[2] right-0 hidden md:flex`}
+          className={`absolute md:top-[-5rem]  lg:top-[-7rem] right-0 hidden md:flex`}
           as="link"
           link={`https://github.com/${userData.githubUsername}`}
         >
           View GitHub
         </ViewAllButton>
-      </header>
-
-      <div className="grid max-w-6xl grid-cols-1 gap-8 px-10 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:-mt-10 gap-y-20">
         {repos &&
           repos.map((latestRepo, idx) => (
             <GithubRepoCard latestRepo={latestRepo} key={idx} />
