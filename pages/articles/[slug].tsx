@@ -14,6 +14,9 @@ const components = {
   ArticleBullet: dynamic(() => import('../../components/ArticleBullet')),
   ArticleHighlight: dynamic(() => import('../../components/ArticleHighlight')),
   ArticleImage: dynamic(() => import('../../components/ArticleImage')),
+  ArticleOrderedList: dynamic(
+    () => import('../../components/ArticleOrderedList')
+  ),
 };
 
 export default function ArticleDetail({ frontMatter, mdxSource }) {
