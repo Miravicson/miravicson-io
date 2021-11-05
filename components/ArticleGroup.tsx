@@ -30,7 +30,7 @@ function ArticleCardContainer({
   );
 }
 
-function ArticleCard({ title, excerpt, slug }: Omit<IArticle, 'body'>) {
+function ArticleCard({ title, excerpt }: Omit<IArticle, 'body'>) {
   return (
     <div className={`group`}>
       <h2 className={`text-[1.125rem] font-medium leading-[1.4em] mb-[0.5em]`}>
@@ -41,7 +41,7 @@ function ArticleCard({ title, excerpt, slug }: Omit<IArticle, 'body'>) {
       >
         {excerpt}
       </p>
-      <ReadMoreButton className={`mt-[1rem]`} link={`/article/${slug}`} />
+      <ReadMoreButton className={`mt-[1rem]`} />
     </div>
   );
 }
