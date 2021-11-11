@@ -61,7 +61,7 @@ export default function ContainerBlock({ children }) {
         />
         <meta
           name="theme-color"
-          content={theme === 'light' ? '#fff' : '#161616'}
+          content={theme === 'light' ? '#da2626' : '#161616'}
         />
         <meta content={meta.description} name="description" />
         <meta
