@@ -1,13 +1,12 @@
 import React from 'react';
 import userData from '@constants/data';
 import SocialLink from './SocialLink';
+import TechStackThumbNail, { techStack } from './TechStackThumbNail';
 
 function SocialLinks({ className }: { className?: string }) {
   return (
     <div className={`hidden md:block`}>
-      <h1 className="mt-8 text-xl font-semibold">
-        Social Links
-      </h1>
+      <h1 className="mt-8 text-xl font-semibold">Social Links</h1>
       <div className={`mt-4 ml-4 ${className}`}>
         {Object.values(userData.socialLinks).map((socialLink) => (
           <SocialLink key={socialLink.name} {...socialLink} />
@@ -52,63 +51,25 @@ export default function AboutMe() {
             </figure>
 
             {userData.about.description?.map((desc, idx) => (
-              <p key={idx} className="mb-4 text-[1.125rem] leading-[1.7] break-words">
+              <p
+                key={idx}
+                className="mb-4 text-[1.125rem] leading-[1.7] break-words"
+              >
                 {desc}
               </p>
             ))}
 
-            <h1 className="inline-block px-2 py-1 text-3xl font-bold bg-red-500 rounded-md text-gray-50">
+            <h1 className="inline-block px-2 py-1 mt-4 text-3xl font-bold rounded-md bg-error-color text-gray-50">
               Tech Stack
             </h1>
             <div className="flex flex-row flex-wrap mt-8">
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"
-                className="w-20 h-20 mx-4 my-4"
-              />
+              {techStack.map((techStack) => (
+                <TechStackThumbNail
+                  key={techStack.name}
+                  Icon={techStack.icon}
+                  name={techStack.name}
+                />
+              ))}
             </div>
           </div>
         </div>
