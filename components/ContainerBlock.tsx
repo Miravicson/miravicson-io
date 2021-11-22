@@ -61,7 +61,11 @@ export default function ContainerBlock({ children }) {
         />
         <meta
           name="theme-color"
-          content={theme === 'light' ? '#da2626' : '#161616'}
+          content={
+            theme === 'light'
+              ? 'bg-top-background-color'
+              : `bg-d-top-background-color `
+          }
         />
         <meta content={meta.description} name="description" />
         <meta
