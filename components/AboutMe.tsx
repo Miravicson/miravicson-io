@@ -2,6 +2,7 @@ import React from 'react';
 import userData from '@constants/data';
 import SocialLink from './SocialLink';
 import TechStackThumbNail, { techStack } from './TechStackThumbNail';
+import Image from 'next/image';
 
 function SocialLinks({ className }: { className?: string }) {
   return (
@@ -27,10 +28,12 @@ export default function AboutMe() {
 
       <div className="relative w-full mt-[1.5rem] full-page-width sm:hidden">
         <figure className="w-full">
-          <img
+          <Image
             src={userData.avatarUrl}
             alt="victor ughonu"
             className="object-cover w-full shadow-lg"
+            height="505"
+            width="495"
           />
         </figure>
       </div>
@@ -43,10 +46,12 @@ export default function AboutMe() {
           {/* Text area */}
           <div className="col-span-1 mt-4 md:col-span-2">
             <figure className="floated-profile-picture">
-              <img
+              <Image
                 src={userData.avatarUrl}
                 alt="victor ughonu"
                 className="h-full shadow-lg "
+                width="313"
+                height="320"
               />
             </figure>
 
@@ -62,7 +67,7 @@ export default function AboutMe() {
             <h1 className="inline-block px-2 py-1 mt-4 text-3xl font-bold rounded-md bg-error-color text-gray-50">
               Tech Stack
             </h1>
-            <div className="flex flex-row flex-wrap mt-8">
+            <div className="grid grid-cols-4 pt-5">
               {techStack.map((techStack) => (
                 <TechStackThumbNail
                   key={techStack.name}

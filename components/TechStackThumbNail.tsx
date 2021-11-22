@@ -112,7 +112,7 @@ export const techStack = [
     icon: Css3,
   },
   {
-    name: 'Styled-Components',
+    name: 'Styled Components',
     icon: Styledcomponents,
   },
   {
@@ -195,10 +195,10 @@ interface Props {
 export default function TechStackThumbNail({ Icon, name }) {
   return (
     <div
-      className={`mx-3 my-3 sm:mx-4 sm:my-4  bmd:mx-4 bmd:my-4 fill-current text-dark-tiles items-center flex flex-col`}
+      className={`mx-3 my-3 sm:mx-4 sm:my-4 justify-self-center bmd:mx-4 bmd:my-4 fill-current items-center flex flex-col`}
     >
       <Icon className={`w-10 h-10 sm:w-12 sm:h-12 bmd:w-20 bmd:h-20`} />
-      <span className={`text-[11px] mt-5px block bmd:text-[1rem] mt-[0.6rem]`}>{name}</span>
+      <div className={`text-[11px] mt-5px bmd:text-[1rem] mt-[0.6rem] flex justify-center text-center`}>{name}</div>
     </div>
   );
 }
