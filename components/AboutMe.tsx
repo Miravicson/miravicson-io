@@ -21,7 +21,7 @@ export default function AboutMe() {
   return (
     <section>
       <div className="mx-auto text-container">
-        <p className="text-2xl font-medium leading-[1.5] md:text-4xl">
+        <p className="text-2xl font-medium leading-[1.5] md:text-4xl md:leading-[1.5]">
           {userData.about.title}
         </p>
       </div>
