@@ -20,8 +20,8 @@ export default function Hero() {
           </h1>
         </div>
         {/* Image container */}
-        <div className="order-first mb-6 ssm:mb-0 ssm:order-last relative w-full sm:block sm:left-[1vw] sm:top-[calc(-1rem+5vw)] md:top-[4rem] bmd:left-[2vw] 2xl:w-2/6 2xl:left-[12rem]">
-          <div className="w-full transform sm:scale-[0.9] bmd:scale-[1]">
+        <div className="order-first ssm:mb-0 ssm:order-last relative w-full sm:block sm:left-[1vw] sm:top-[calc(-1rem+5vw)] md:top-[4rem] bmd:left-[2vw] 2xl:w-2/6 2xl:left-[12rem]">
+          <div className="w-full transform scale-75 sm:scale-[0.9] bmd:scale-[1]">
             <ProgressiveImage
               src={userData.avatarUrl}
               placeholder={userData.avatarUrlSmall}
