@@ -29,7 +29,8 @@ export function useSetMeta(meta: IContainerBlockState): void {
 export const defaultMeta = {
   title: 'Victor Ughonu - Developer, AI Engineer, Programmer, Writer',
   description: `I've been developing websites for 6 years straight. Get in touch with me to know more.`,
-  image: '/img/victor-ughonu.jpg',
+  image:
+    'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu.jpg',
   type: 'website',
 };
 
@@ -78,7 +79,7 @@ export default function ContainerBlock({ children }) {
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content={meta.image} />
         <meta name="twitter:site" content="@miravicson" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
