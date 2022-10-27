@@ -1,5 +1,5 @@
 import Header from '@components/Header';
-import { useSetMeta } from '../components/ContainerBlock';
+import { useSetMeta } from '../components/SEOProvider';
 import AboutMe from '../components/AboutMe';
 
 export default function About() {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useSetMeta } from '../components/ContainerBlock';
+import { useSetMeta } from '../components/SEOProvider';
 import SelectedProjects from '../components/SelectedProjects';
 import LatestCode from '../components/LatestCode';
 import Hero from '../components/Hero';

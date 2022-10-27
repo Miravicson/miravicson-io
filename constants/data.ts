@@ -113,6 +113,21 @@ Do stay tuned to the articles page, you will be glad you did.`,
     },
     github: { link: 'https://github.com/miravicson', name: 'Github' },
   },
+  SEO: {
+    summary: {
+      title: 'Victor Ughonu - Developer, AI Engineer, Programmer, Writer',
+      description: `I've been developing websites for 6 years straight. Get in touch with me to know more.`,
+      image:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu.jpg',
+      type: 'website',
+    },
+    keywords:
+      'Victor Ughonu, victor chiagozie ughonu, miravicson, Full-Stack Developer Artificial Intelligence Developer, Intel AI Innovator, Intel AI Ambassador',
+    author: 'victor ughonu, https://www.miravicson.com',
+    baseUrl: "https://miravicson.com",
+    ogSiteName: "Victor Ughonu",
+    twitterSite: "@miravicson",
+  },
 };
 
 export default userData;
