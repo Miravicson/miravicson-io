@@ -67,9 +67,16 @@ Do stay tuned to the articles page, you will be glad you did.`,
   experience: [
     {
       title: 'Senior Full-Stack Software Developer',
-      company: 'Kudi',
+      company: 'Turing.com',
+      year: '2022',
+      companyLink: 'https://turing.com',
+      desc: 'Improved developer retention by 70% by implementing An API that allows developers update their availability through WhatsApp chats. Wrote a warmup algorithm that enabled adding new domains to the email system used by the company. This algorithm translated to improved domain reputation and allowed for scaling of the email system by 30%.',
+    },
+    {
+      title: 'Senior Full-Stack Software Developer',
+      company: 'Nomba (Formerly Kudi)',
       year: '2021',
-      companyLink: 'https://kudi.com',
+      companyLink: 'https://nomba.com',
       desc: 'Collaborated with UI/UX Designer to build an In-house React/Node Js dashboard to enable colleagues monitor and reconcile transactions, resolve issues transaction related issues from the mobile application and reconcile transaction statements from financial partners. Reduced the time taken to resolve and reconcile transactions from a week to 3 seconds',
     },
     {
