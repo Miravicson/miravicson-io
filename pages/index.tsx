@@ -34,7 +34,7 @@ export default function Index() {
     <>
       <Hero />
       <SelectedProjects />
-      <LatestCode repositories={repositories} />
+      {/* <LatestCode repositories={repositories} /> */}
     </>
   );
 }
