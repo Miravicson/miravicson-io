@@ -6,5 +6,13 @@ module.exports = withMDX({
   swcMinify: true, // handle minification with rust compiler
   images: {
     domains: ['miravicson.com', 'localhost', 'res.cloudinary.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 });

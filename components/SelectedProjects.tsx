@@ -1,9 +1,43 @@
 import React from 'react';
-import Link from 'next/link';
 import SubDuedHeader from './SubDuedHeader';
 import ViewAllButton from './ViewAllButton';
+import userData from '@constants/data';
+import SelectedProjectCard from './SelectedProjectCard';
+
+function* cycle(n) {
+  let start = 0;
+  while (true) {
+    if (start >= n) {
+      start = 0;
+    }
+    yield start;
+    start++;
+  }
+}
 
 export default function SelectedProjects() {
+  const iteratorRef = React.useRef(cycle(3));
+
+  function cycleColSpan() {
+    const classes = ['sm:col-span-3', 'sm:col-span-2', 'sm:col-span-1'];
+    return classes[iteratorRef.current.next().value as number];
+  }
+
+  const renderSelectedProjects = (
+    selectedProject: { coverImage: string; link: string; title: string },
+    index: number
+  ) => {
+    return (
+      <SelectedProjectCard
+        key={`${selectedProject.title}`}
+        selectedProject={selectedProject}
+        index={index}
+        imageClassName=""
+        wrapperClassName={`block w-full col-span-3 self-start ${cycleColSpan()} shadow-2xl`}
+      />
+    );
+  };
+
   return (
     <div>
       <div>
@@ -17,73 +51,8 @@ export default function SelectedProjects() {
             View All
           </ViewAllButton>
         </header>
-
-        {/* Grid starts here */}
         <div className="grid gap-8 md:grid-cols-3 lg:-mt-8">
-          {/* Single card */}
-          <a
-            href="https://natours-miravicson.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-            className="block w-full col-span-3 shadow-2xl"
-          >
-            <div className="relative overflow-hidden">
-              <img
-                src="/img/natours.jpg"
-                alt="Victor Ughonu natours portfolio"
-                className="transition ease-out transform hover:scale-125 duration-2000"
-              />
-              <h1 className="absolute px-2 text-xl font-bold bg-red-500 rounded-md top-10 left-10 text-gray-50">
-                Natours UI
-              </h1>
-              <h1 className="absolute text-xl font-bold bottom-10 left-10 text-gray-50">
-                01
-              </h1>
-            </div>
-          </a>
-          {/* Single card */}
-          <a
-            href="https://nexter-miravicson.netlify.app"
-            target="_blank"
-            className="block w-full col-span-3 shadow-2xl sm:col-span-2"
-            rel="noreferrer"
-          >
-            <div className="relative overflow-hidden">
-              {/* <BlackOverlay /> */}
-              <img
-                src="/img/nexter.jpg"
-                alt="portfolio"
-                className="transition ease-out transform hover:scale-125 duration-2000"
-              />
-              <h1 className="absolute px-2 text-xl font-bold bg-red-500 rounded-md top-10 left-10 text-gray-50">
-                Nexter
-              </h1>
-              <h1 className="absolute text-xl font-bold bottom-10 left-10 text-gray-50">
-                02
-              </h1>
-            </div>
-          </a>
-          {/* Single card */}
-          <a
-            href="https://mallbly.com"
-            target="_blank"
-            className="block object-cover w-full col-span-3 sm:col-span-1"
-            rel="noreferrer"
-          >
-            <div className="relative overflow-hidden shadow-2xl">
-              <img
-                src="/img/mallbly.jpg"
-                alt="Mallbly"
-                className="object-cover transition ease-out transform shadow-2xl hover:scale-125 duration-2000"
-              />
-              <h1 className="absolute px-2 text-xl font-bold bg-red-500 rounded-md top-10 left-10 text-gray-50">
-                Mallbly
-              </h1>
-              <h1 className="absolute text-xl font-bold bottom-10 left-10 text-gray-50">
-                03
-              </h1>
-            </div>
-          </a>
+          {userData.selectedProjects.map(renderSelectedProjects)}
         </div>
         <ViewAllButton
           className={`mt-[2rem] md:hidden`}

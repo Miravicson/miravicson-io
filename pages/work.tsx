@@ -1,5 +1,5 @@
 import Header from '@components/Header';
-import { defaultMeta, useSetMeta } from '../components/ContainerBlock';
+import { defaultMeta, useSetMeta } from '../components/SEOProvider';
 import WorkComponent from '../components/Work';
 
 export default function Work() {

@@ -1,4 +1,4 @@
-import { useSetMeta } from '@components/ContainerBlock';
+import { useSetMeta } from '@components/SEOProvider';
 import { IArticle } from '@constants/articles';
 import ArticleGroup from '@components/ArticleGroup';
 import Header from '@components/Header';

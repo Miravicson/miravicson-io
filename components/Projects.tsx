@@ -1,6 +1,6 @@
 import React from 'react';
 import userData from '@constants/data';
-import { defaultMeta, useSetMeta } from './ContainerBlock';
+import { defaultMeta, useSetMeta } from './SEOProvider';
 import Image from 'next/image';
 
 export default function Projects() {
