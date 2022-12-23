@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import userData from '@constants/data';
 import SubDuedHeader from './SubDuedHeader';
 import ViewAllButton from './ViewAllButton';
-// import getLatestRepos from '@lib/getLatestRepos';
-export default function LatestCode({ repositories }) {
+import { useGetLatestRepos } from '@hooks/use-get-latest-repos';
+export default function LatestCode() {
+  const repositories = useGetLatestRepos();
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {

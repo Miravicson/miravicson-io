@@ -4,7 +4,7 @@ import React from 'react';
 import SEOProvider from '@components/SEOProvider';
 import Layout from '@components/Layout';
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <ThemeProvider defaultTheme="light" attribute="class">
       <SEOProvider>
@@ -16,4 +16,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default App;

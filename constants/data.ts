@@ -11,6 +11,12 @@ const userData = {
   address: 'Lagos, Nigeria',
   projects: [
     {
+      title: 'Metaversus',
+      link: 'https://metaversus-five.vercel.app/',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1671745660/miravicson.com/projects/Metaversus.png',
+    },
+    {
       title: 'Natours UI',
       link: 'https://natours-miravicson.netlify.app/',
       imgUrl:
@@ -51,6 +57,29 @@ const userData = {
       link: 'https://featurester.herokuapp.com',
       imgUrl:
         'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634651432/miravicson.com/projects/featurester.png',
+    },
+  ],
+  selectedProjects: [
+    {
+      coverImage:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1671745660/miravicson.com/projects/Metaversus.png',
+      link: 'https://metaversus-five.vercel.app/',
+      title: 'Metaversus',
+    },
+    {
+      coverImage: '/img/natours.jpg',
+      link: 'https://natours-miravicson.netlify.app/',
+      title: 'Natours UI',
+    },
+    {
+      coverImage: '/img/nexter.jpg',
+      link: 'https://nexter-miravicson.netlify.app',
+      title: 'Nexter',
+    },
+    {
+      coverImage: '/img/mallbly.jpg',
+      link: '"https://mallbly.com"',
+      title: 'Mallbly',
     },
   ],
   about: {
@@ -124,9 +153,16 @@ Do stay tuned to the articles page, you will be glad you did.`,
     keywords:
       'Victor Ughonu, victor chiagozie ughonu, miravicson, Full-Stack Developer Artificial Intelligence Developer, Intel AI Innovator, Intel AI Ambassador',
     author: 'victor ughonu, https://www.miravicson.com',
-    baseUrl: "https://miravicson.com",
-    ogSiteName: "Victor Ughonu",
-    twitterSite: "@miravicson",
+    baseUrl: 'https://miravicson.com',
+    ogSiteName: 'Victor Ughonu',
+    twitterSite: '@miravicson',
+    byPages: {
+      homePage: {
+        title:
+          'Victor Ughonu - Full-Stack Developer, AI Engineer, Writer, Photographer',
+        description: "Victor Ughonu's Home Page",
+      },
+    },
   },
 };
 

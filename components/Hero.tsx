@@ -31,8 +31,9 @@ export default function Hero() {
                   src={src}
                   alt="victor ughonu"
                   className="rounded-full shadow-lg bmd:rounded-none "
-                  height="505"
-                  width="495"
+                  height={505}
+                  width={495}
+                  priority
                 />
               )}
             </ProgressiveImage>
