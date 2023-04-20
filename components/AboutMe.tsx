@@ -1,8 +1,7 @@
-import React from 'react';
 import userData from '@constants/data';
+import Image from 'next/image';
 import SocialLink from './SocialLink';
 import TechStackThumbNail, { techStack } from './TechStackThumbNail';
-import Image from 'next/image';
 
 function SocialLinks({ className }: { className?: string }) {
   return (
@@ -21,7 +20,7 @@ export default function AboutMe() {
   return (
     <section>
       <div className="mx-auto text-container">
-        <p className="text-2xl font-medium leading-[1.5] md:text-4xl md:leading-[1.5]">
+        <p className="text-2xl font-normal leading-[1.5] md:text-4xl md:leading-[1.5]">
           {userData.about.title}
         </p>
       </div>
