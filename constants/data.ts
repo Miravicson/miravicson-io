@@ -2,9 +2,8 @@ const userData = {
   githubUsername: 'miravicson',
   name: 'Victor Ughonu',
   designation: 'Full-Stack Developer',
-  //avatarUrl:
-    //'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu-big.jpg',
-  avatarUrl: 'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1676197100/miravicson.com/vic_dp.jpg',
+  avatarUrl:
+    'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu-big.jpg',
   avatarUrlSmall:
     'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu.jpg',
   email: 'victorughonu@gmail.com',
