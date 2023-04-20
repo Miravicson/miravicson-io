@@ -1,11 +1,30 @@
-import Link from 'next/link';
 import userData from '@constants/data';
-import NavLink from './NavLink';
+import Link from 'next/link';
 import InstagramLogo from './Icons/InstagramLogo';
-import TwitterLogo from './Icons/TwitterLogo';
 import LinkedInLogo from './Icons/LinkedInLogo';
+import TwitterLogo from './Icons/TwitterLogo';
+import NavLink from './NavLink';
 import ThemeToggleButton from './ThemeToggleButton';
 
+const navBarLinks = [
+  { name: 'Articles', link: '/articles' },
+  {
+    name: 'Work',
+    link: '/work',
+  },
+  {
+    name: 'Projects',
+    link: '/projects',
+  },
+  {
+    name: 'About',
+    link: '/about',
+  },
+  {
+    name: 'Resume',
+    link: '/resume',
+  },
+];
 export default function Navbar() {
   return (
     <div className="mt-8  md:mt-[5vw] bmd:mt-[10vw]">
@@ -24,10 +43,13 @@ export default function Navbar() {
         </div>
         {/* Desktop Nav links */}
         <div className="hidden space-x-8 md:block">
-          <NavLink path="/articles" name="Articles" />
-          <NavLink path="/work" name="Work" />
-          <NavLink path="/projects" name="Projects" />
-          <NavLink path="/about" name="About" />
+          {navBarLinks.map((linkObj) => (
+            <NavLink
+              key={linkObj.name}
+              path={linkObj.link}
+              name={linkObj.name}
+            />
+          ))}
         </div>
 
         <div className="flex flex-row items-center space-x-3">
@@ -35,19 +57,25 @@ export default function Navbar() {
             href={userData.socialLinks.instagram.link}
             className="text-base font-normal text-primary-text-color dark:text-d-primary-text-color"
           >
-            <InstagramLogo className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
+            <InstagramLogo
+              className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`}
+            />
           </a>
           <a
             href={userData.socialLinks.twitter.link}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <TwitterLogo className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
+            <TwitterLogo
+              className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`}
+            />
           </a>
           <a
             href={userData.socialLinks.linkedin.link}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <LinkedInLogo className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`} />
+            <LinkedInLogo
+              className={`w-[16px] h-[16px] sm:w-4 sm:h-4 bmd:w-5 bmd:h-5`}
+            />
           </a>
           <ThemeToggleButton />
         </div>
@@ -55,10 +83,9 @@ export default function Navbar() {
 
       {/* Mobile Nav links */}
       <div className="flex justify-between w-full mt-8 md:hidden">
-        <NavLink path="/articles" name="Articles" />
-        <NavLink path="/work" name="Work" />
-        <NavLink path="/projects" name="Projects" />
-        <NavLink path="/about" name="About" />
+        {navBarLinks.map((linkObj) => (
+          <NavLink key={linkObj.name} path={linkObj.link} name={linkObj.name} />
+        ))}
       </div>
     </div>
   );
