@@ -5,6 +5,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 import { download } from '@lib/download';
 import { useRouter } from 'next/router';
 import styles from './CustomPdfViewer.module.css';
+import Loader from './Loader';
 import ViewAllButton from './ViewAllButton';
 
 const CustomPdfViewer: React.FC = () => {
@@ -32,7 +33,11 @@ const CustomPdfViewer: React.FC = () => {
         <ViewAllButton onClick={handleDownload}>Download Resume</ViewAllButton>
       </div>
       <div>
-        <Document file="./pdf/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+        <Document
+          file="./pdf/resume.pdf"
+          onLoadSuccess={onDocumentLoadSuccess}
+          loading={<Loader text="Building resume" />}
+        >
           {Array.from({ length: numPages }, (_, index) => (
             <Fragment key={index}>
               <Page
@@ -41,6 +46,7 @@ const CustomPdfViewer: React.FC = () => {
                 renderAnnotationLayer={false}
                 renderTextLayer={false}
                 className={` ${styles.Page}`}
+                loading=""
               />
               <br />
             </Fragment>
