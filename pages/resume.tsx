@@ -1,6 +1,10 @@
 import Header from '@components/Header';
+import dynamic from 'next/dist/shared/lib/dynamic';
 import { useSetMeta } from '../components/SEOProvider';
-import Resume from '../components/Resume';
+
+const CustomPdfViewer = dynamic(() => import('../components/CustomPdfViewer'), {
+  ssr: false,
+});
 
 export default function About() {
   useSetMeta({
@@ -13,7 +17,7 @@ export default function About() {
       <Header>
         <h1 className={`font-bold leading-[1] text-[1em] m-0`}>Resume</h1>
       </Header>
-      <Resume />
+      <CustomPdfViewer />
     </>
   );
 }
