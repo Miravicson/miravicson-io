@@ -1,8 +1,7 @@
-import React from 'react';
 import userData from '@constants/data';
-import Header from './Header';
-import ProgressiveImage from 'react-progressive-image';
 import Image from 'next/image';
+import ProgressiveImage from 'react-progressive-image';
+import Header from './Header';
 import AngledArrow from './Icons/AngledArrow';
 export default function Hero() {
   return (
@@ -15,8 +14,6 @@ export default function Hero() {
             Developer.
             <br />
             <span className={`whitespace-nowrap`}>AI Engineer.</span>
-            <br />
-            Photographer.
           </h1>
         </div>
         {/* Image container */}

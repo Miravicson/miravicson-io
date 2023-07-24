@@ -11,6 +11,12 @@ const userData = {
   address: 'Lagos, Nigeria',
   projects: [
     {
+      title: 'Dot HMO',
+      link: 'https://hmo.dot.ai',
+      imgUrl:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1690191622/miravicson.com/projects/dot-hmo.png',
+    },
+    {
       title: 'Metaversus',
       link: 'https://metaversus-five.vercel.app/',
       imgUrl:
@@ -61,6 +67,12 @@ const userData = {
   ],
   selectedProjects: [
     {
+      title: 'Dot HMO',
+      link: 'https://hmo.dot.ai',
+      coverImage:
+        'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1690191622/miravicson.com/projects/dot-hmo.png',
+    },
+    {
       coverImage:
         'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1671745660/miravicson.com/projects/Metaversus.png',
       link: 'https://metaversus-five.vercel.app/',
@@ -95,6 +107,13 @@ const userData = {
     currentProjectUrl: 'https://mairmoire-git-main-miravicson.vercel.app',
   },
   experience: [
+    {
+      title: 'Senior Full-Stack Software Developer',
+      company: 'Dot.ai',
+      year: '2023',
+      companyLink: 'https://dot.ai',
+      desc: 'Increased sales of retail insurance plans by 60% by building a fullstack e-commerce platform that enable customers purchase and subscribe for insurance plans.',
+    },
     {
       title: 'Senior Full-Stack Software Developer',
       company: 'Turing.com',
