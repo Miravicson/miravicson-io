@@ -1,6 +1,6 @@
 import Header from '@components/Header';
+import Experience from '../components/Experience';
 import { defaultMeta, useSetMeta } from '../components/SEOProvider';
-import WorkComponent from '../components/Work';
 
 export default function Work() {
   useSetMeta(defaultMeta);
@@ -9,7 +9,7 @@ export default function Work() {
       <Header>
         <h1 className={`font-bold leading-[1] text-[1em] m-0`}>Work</h1>
       </Header>
-      <WorkComponent />
+      <Experience />
     </>
   );
 }

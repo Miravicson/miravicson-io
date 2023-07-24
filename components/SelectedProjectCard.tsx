@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 type Props = {
@@ -37,7 +36,7 @@ const SelectedProjectCard = ({
           {selectedProject.title}
         </h1>
         <h1 className="absolute text-xl font-bold bottom-10 left-10 text-gray-50">
-          {`${index}`.padStart(2, '0')}
+          {`${index + 1}`.padStart(2, '0')}
         </h1>
       </div>
     </a>
