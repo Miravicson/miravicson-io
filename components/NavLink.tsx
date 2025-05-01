@@ -16,16 +16,12 @@ function NavLink({ path, name }: Props): ReactElement {
   const isPathActive = router.asPath === normalizedPath;
 
   return (
-    <Link href={normalizedPath}>
-      <a
-        className={`text-base select-none  ${
-          isPathActive
-            ? 'text-gray-800 font-bold dark:text-gray-400'
-            : 'text-gray-600 dark:text-gray-300 font-normal '
-        }`}
-      >
+    <Link href={normalizedPath} className={`text-base select-none  ${
+      isPathActive
+        ? 'text-gray-800 font-bold dark:text-gray-400'
+        : 'text-gray-600 dark:text-gray-300 font-normal '
+    }`}>
         {name} {isPathActive && <DownArrow />}
-      </a>
     </Link>
   );
 }

@@ -67,9 +67,7 @@ function ArticlesByYearSection({
           return articles.map((article) => {
             return (
               <Link key={article.slug} href={`/articles/${article.slug}`}>
-                <a>
                   <ArticleCard key={article.slug} {...article} />
-                </a>
               </Link>
             );
           });

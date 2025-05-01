@@ -22,11 +22,10 @@ function LinkSubComponent({
   icon?: React.ReactElement;
 }) {
   return (
-    <Link href={link}>
-      <a className={`button ${className}`} role="button">
+    <Link href={link} className={`button ${className}`} role="button">
+
         <div className={`button-icon`}>{icon}</div>
         <div className={`button-text`}>{children}</div>
-      </a>
     </Link>
   );
 }

@@ -26,6 +26,8 @@ export default function Articles({
 export async function getStaticProps() {
   const articles = await getArticlesPreview();
 
+  // console.log(articles);
+
   return {
     props: {
       articles,

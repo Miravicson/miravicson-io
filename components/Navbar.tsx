@@ -31,14 +31,14 @@ export default function Navbar() {
       <div className="flex items-center justify-between md:flex-row">
         <div className="flex flex-col">
           <Link href="/">
-            <a>
+ 
               <h1 className="text-base md:text-[1.125rem] md:leading-[1.3] font-medium leading-[1.3]">
                 {userData.name}
               </h1>
               <p className="text-base font-light leading-[1.3] md:text-[1.125rem] md:leading-[1.3]">
                 {userData.designation}
               </p>
-            </a>
+
           </Link>
         </div>
         {/* Desktop Nav links */}

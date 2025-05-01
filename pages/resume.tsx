@@ -10,7 +10,7 @@ export default function About() {
   useSetMeta({
     title: 'Resume \u2014 Victor Ughonu',
     description:
-      'I am a Senior FullStack Developer at Kudi.com. I lead the design and development of Internal Tools used to empower my colleagues to be productive. I am passionate about Artificial Intelligence and Deep Learning. In my spare time, you would find me training an AI model or trying to beat my record score on Kaggle.',
+      'I’m Victor — a full-stack engineer since 2018 with a knack for building thoughtful, scalable systems. At Kudi (now Nomba), I led the development of internal tools that empowered 300+ support staff to resolve financial issues swiftly. Now I’m building Bloomers, a health-tech platform making maternal and child healthcare more accessible across Nigeria.',
   });
   return (
     <>
