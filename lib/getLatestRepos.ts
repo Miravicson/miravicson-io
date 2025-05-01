@@ -24,9 +24,6 @@ const getLatestRepos = async (data): Promise<Array<unknown>> => {
   try {
     const username = data.githubUsername;
 
-    // let token = `token ${process.env.GITHUB_AUTH_TOKEN}`;
-    // console.log("TOKEN", token);
-
     if (token) {
       const res: AxiosResponse<{ items: [] }> = await axios.get(
         `https://api.github.com/search/repositories?q=user:${username}+sort:author-date-asc`,

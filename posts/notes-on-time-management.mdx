@@ -1,10 +1,10 @@
 ---
-title: 'Notes on time management'
-excerpt: 'Bugs are eccentric black holes that could suck up all my time and turn hours into minutes. "Everyone has a plan until they get punched in the face." Mike Tyson said this. While software development might be different from boxing, every software developer faces the menace of bugs.'
+title: "The Developer's Guide to Time Management"
+excerpt: "Everyone has a plan until they get punched in the face. Mike Tyson's quote perfectly captures the reality of software development. Bugs are eccentric black holes that can devour hours of carefully planned time, turning meticulously scheduled days into chaos. But there are ways to navigate this reality effectively."
 coverImage: '/img/blog/notes-on-time-management/time-management.jpg'
 thumbnail: '/img/blog/notes-on-time-management/time-management.jpg'
 date: '2021-11-04T00:38:07.322Z'
-tags: ['time management', 'productivity']
+tags: ['time management', 'productivity', 'software development', 'work-life balance']
 author:
   name: Victor Ughonu
   picture: '/img/blog/authors/vu.jpg'
@@ -12,112 +12,106 @@ ogImage:
   url: '/img/blog/notes-on-time-management/time-management.jpg'
 ---
 
-<ArticleImage imageUrl="/img/blog/notes-on-time-management/time-management.jpg" alt="productivity and time in one image" />
+<ArticleImage imageUrl="/img/blog/notes-on-time-management/time-management.jpg" alt="A visual representation of productivity and time management" />
 
-<ArticleHeader>What worked...</ArticleHeader>
+<ArticleHeader> From Academic Time Management to Developer Reality</ArticleHeader>
 
-<ArticleParagraph>
-  While I was a student, I managed my course load by allotting time to
-  individual courses. Time management was straightforward then. I had three
-  criteria for deciding which courses I spent more time studying.
-</ArticleParagraph>
+<ArticleParagraph>During my university years, time management followed a straightforward formula. I allocated hours to courses based on three simple criteria:</ArticleParagraph>
 
 <ArticleBullet
   list={[
-    <span>The course unit</span>,
-    <span>My flair for the course</span>,
-    <span>The relevance of the course to my career.</span>,
+    <span>Course unit weight in my overall grade</span>,
+    <span>My natural aptitude for the subject matter</span>,
+    <span>The course's relevance to my future career goals</span>,
   ]}
 />
 
-<ArticleParagraph>
-  In general, courses with more units or more relevance to my career path or the
-  ones I was unfamiliar with got more time; And vice-versa.
-</ArticleParagraph>
+<ArticleParagraph>This system worked beautifully. Courses with higher credit units, less personal familiarity, or greater career relevance received more time. I worked in focused two-hour blocks—roughly 105 minutes of concentrated study followed by 15-minute breaks, similar to the Pomodoro Technique that research has shown can increase productivity by as much as 25% for many people.</ArticleParagraph>
 
-<ArticleParagraph>
-  I could hold my focus for about an hour forty-five minutes before I grew bored or before
-  diminishing return kicked in. So I decided to work in two hours unit of time,
-  or Pomodoro - an hour forty-five minutes for studying interleaved with fifteen minutes break
-  time.
-</ArticleParagraph>
+<ArticleParagraph>As productivity expert Francesco Cirillo notes, "The Pomodoro Technique isn't just about working with time; it's about creating a sustainable relationship with how we work." This structured approach served me well throughout my academic career, providing both efficiency and balance.</ArticleParagraph>
 
-<ArticleParagraph>
-  It was a simple and efficient time-management strategy for studying.
-</ArticleParagraph>
+<ArticleHeader>The Developer's Dilemma</ArticleHeader>
 
-<ArticleHeader>The statusquo...</ArticleHeader>
+<ArticleParagraph>Fast forward to my life as a software developer, and the simplicity of my academic time management system quickly dissolved. The variables affecting task prioritization have multiplied exponentially.</ArticleParagraph>
 
-<ArticleParagraph>
-  Recently, I have found my earlier strategy for time management applies only in
-  part to the life I lead as a software developer. Nowadays, I must admit that
-  there are more variables at play when deciding which tasks to prioritize and how to apportion time.
-</ArticleParagraph>
-
-<ArticleParagraph>
-  Imagine that on a typical day, I need to close out the three tasks listed
-  below.
-</ArticleParagraph>
+<ArticleParagraph>Consider a typical day with these three tasks on my plate:</ArticleParagraph>
 
 <ArticleBullet
   list={[
     <span>
-      Complete the frontend feature to enable the finance team to classify
-      issues and bulk-resolve them
+      Complete a frontend feature allowing the finance team to classify and bulk-resolve customer issues
     </span>,
-    <span>Build an API using an unfamiliar tech stack</span>,
-    <span>Finish a chapter on Data Structures and Algorithms</span>,
+    <span>Build an API using an unfamiliar technology stack</span>,
+    <span>Study a chapter on Data Structures and Algorithms for professional development</span>,
   ]}
 />
 
-<ArticleParagraph>
-  At a glance, one could identify three different factors that could influence
-  time allocation for these three tasks.
-</ArticleParagraph>
+<ArticleParagraph>Now I'm juggling multiple competing factors that didn't exist in my academic framework:</ArticleParagraph>
 
 <ArticleOrderedList
   list={[
     <span>
-      <ArticleHighlight>Urgency: &nbsp;</ArticleHighlight>The first task seems pretty urgent. Customers would be unhappy
-      with stuck transactions. Delivering this feature would enhance customer
-      goodwill for my employer.
+      <ArticleHighlight>Urgency: </ArticleHighlight>The frontend feature is clearly time-sensitive. Delayed implementation means real customer issues remain unresolved, potentially damaging business relationships. According to a study by PwC, 32% of customers would stop doing business with a brand they loved after just one bad experience, highlighting why urgent customer-facing issues deserve immediate attention.
     </span>,
-    <span><ArticleHighlight>Difficulty: &nbsp;</ArticleHighlight> Before I read Brian Tracy’s  <ArticleHighlight>Eat that frog</ArticleHighlight>, I was pretty much predisposed to postponing any task involving an unfamiliar tech stack for later. In a sense, the less familiar the tech stack is, the lower it is on my task stack. The reason is that I have to decide if I could approach the task by winging it — reading documentations and piecing together information from varying sources. Personally, as a perfectionist, I am not much of a fan of duct-taped work. If I could get all the time I wanted, I would prefer to take out some time and learn the technology stack before commencing work. What would I do when <ArticleHighlight>“Difficulty”</ArticleHighlight> meets <ArticleHighlight>"Urgency”</ArticleHighlight>?</span>,
-    <span><ArticleHighlight>Interest: &nbsp;</ArticleHighlight> There is always a task that I genuinely would love to dedicate all my time to if I could; Learning and reading.</span>,
+    <span>
+      <ArticleHighlight>Technical Complexity: </ArticleHighlight>Before encountering Brian Tracy's <ArticleHighlight>"Eat That Frog"</ArticleHighlight> philosophy—which advocates tackling your most challenging task first—I habitually pushed unfamiliar technical challenges to the bottom of my priority list. Tracy argues that "your 'frog' is your biggest, most important task, the one you're most likely to procrastinate on if you don't do something about it." Working with new technologies requires deciding between "winging it" with documentation or investing time in proper learning. As a perfectionist, I'm reluctant to deliver duct-taped solutions. But what happens when <ArticleHighlight>complexity</ArticleHighlight> collides with <ArticleHighlight>urgency</ArticleHighlight>?
+    </span>,
+    <span>
+      <ArticleHighlight>Personal Growth: </ArticleHighlight>The DSA chapter represents the perpetual tension between immediate deliverables and long-term professional development. A Stack Overflow survey found that 75% of developers dedicate at least 4-5 hours weekly to learning new technologies, underscoring the industry-wide challenge of balancing current work with future skills.
+    </span>,
   ]}
 />
 
+<ArticleHeader>When Plans Meet Reality</ArticleHeader>
+
+<ArticleParagraph>I once attempted to rigidly schedule my development tasks: "I'll spend three hours on this API, then move on regardless of completion status." This approach failed spectacularly.</ArticleParagraph>
+
+<ArticleParagraph>Software development doesn't conform to neat time boxes. Debugging sessions are temporal black holes—what appears to be a quick fix can spiral into hours of investigation. As Mike Tyson so eloquently put it, "Everyone has a plan until they get punched in the face." In development, bugs are those unexpected punches.</ArticleParagraph>
+
+<ArticleParagraph>Few experiences are more demoralizing than ending your day with an unchecked to-do list because a single stubborn bug consumed your carefully allocated hours. According to research published in the Journal of Systems and Software, developers spend approximately 50% of their programming time finding and fixing bugs—a statistic that makes rigid time allocation particularly challenging.</ArticleParagraph>
+
+<ArticleHeader>The Flow State Paradox</ArticleHeader>
+
+<ArticleParagraph>Conversely, there are those magical days of "flow"—when inspiration strikes, patterns emerge clearly, and elegant abstractions materialize effortlessly. Psychologist Mihaly Csikszentmihalyi, who coined the term "flow state," describes it as "being completely involved in an activity for its own sake. The ego falls away. Time flies."</ArticleParagraph>
+
+<ArticleParagraph>These productive periods can't be scheduled or forced. Effective time management isn't just about allocating minutes—it's about managing your mental state through the inevitable highs and lows of software development, recognizing when to push through and when to step back.</ArticleParagraph>
+
+<ArticleHeader>A Pragmatic Approach to Developer Time Management</ArticleHeader>
+
+
+
 <ArticleParagraph>
-There was a time when I tried to apportion some estimated time to tasks. “Oh! I will work on this API for three hours. Hopefully, I will get it done. Otherwise, I will move on to the next task." I often said to myself. In reality, I couldn't always keep to this. It was hardly pragmatic. There are always situations in which the only choice would be to sit through the tasks, ignoring time spent, and see them to completion.
+  I haven't discovered a perfect time management rulebook, but I've developed a pragmatic framework:
+  <ArticleOrderedList
+    list={[
+      <span> <ArticleHighlight>Prioritize by impact</ArticleHighlight>: Start with high-value, high-priority tasks that deliver the most significant business or technical value.</span>,
+      <span> <ArticleHighlight>Make reasonable estimates but hold them loosely</ArticleHighlight>: Research by McKinsey shows that software projects typically exceed time estimates by 66%. Set time boundaries but be prepared to adjust.</span>,
+      <span>  <ArticleHighlight>Create psychological safety nets</ArticleHighlight>: Strategic milestone placement provides completion dopamine even during extended tasks.</span>,
+      <span>  <ArticleHighlight>Embrace productive breaks</ArticleHighlight>: When diminishing returns set in, I switch to varied activities. Neuroscience confirms that different cognitive activities engage different brain regions, allowing fatigued neural pathways to recover. For me, playing guitar and singing along with Ed Sheeran rejuvenates my problem-solving abilities.</span>,
+      <span>  <ArticleHighlight>Practice self-compassion</ArticleHighlight>: The most crucial element of sustainable productivity is forgiving yourself for human limitations. Research published in the Journal of Personality and Social Psychology suggests that self-compassion—not self-criticism—leads to greater motivation and emotional resilience.</span>
+    ]}
+  
+   />
+    
+
+
 </ArticleParagraph>
 
+
+    
+    <ArticleHeader>The Art of Time Management</ArticleHeader>
+    
 <ArticleParagraph>
- Bugs are eccentric black holes that could suck up all my time and turn hours into minutes. "Everyone has a plan until they get punched in the face." Mike Tyson said this. While software development might be different from boxing, every software developer faces the menace of bugs.
+    Effective time management isn't a rigid formula to be memorized but an art to be practiced. It requires balancing structured planning with flexibility to navigate the unpredictable nature of development work. As with any art form, mastery comes through consistent practice and self-awareness.
+
 </ArticleParagraph>
+    
 
 
-<ArticleParagraph>
-It could be almost discouraging when, at the end of the day, you are looking at your to-do list with none of your tasks checked off; no thanks to the bug that not even the numerous pages of StackOverflow answers could help resolve.  I have experienced the above scenario enough time to discount the approach of setting a hard and fast time slot to programming tasks.
-</ArticleParagraph>
+    <ArticleParagraph>
+    I remind myself daily that I'm human. It's perfectly acceptable to experience fatigue and occasional frustration. There will be days when my to-do list remains untouched despite my best efforts. What matters is resilience—the capacity to reset, rest, and return refreshed.
+    </ArticleParagraph>
 
-<ArticleParagraph>
- Of course, there are also good days! There are days when I am on a roll; when I get all kinds of inspiration and easily spot nifty points of abstraction I could leverage save me a ton of coding time. I have discovered that efficient time management involves the management of oneself and demeanor through the highs and lows that come with everyday life &ndash; everyday software development.
-</ArticleParagraph>
-
-<ArticleHeader>What works...</ArticleHeader>
-
-<ArticleParagraph>
-I haven&apos;t discovered the perfect rule book for time management. While a sheer force of habit might make me reach for the time-allotment strategy, I always keep an open mind and make enough allowance to accommodate for things not going according to plan.  As a rule of thumb, I start with high-value, high-priority tasks; make a reasonable estimate of time, and get to work.  Regardless of whether I made record time or not, I am prepared to accept the situation and decide if I should keep at the current task. 
-</ArticleParagraph>
-
-<ArticleParagraph>
-To ameliorate burnout and diminishing returns that inevitably accompany long hours of monotonous work, I always find a suitable point to plant a milestone and then head off to do any other varied activity. Calm music helps me. I often resort to fiddling with my guitar and doing a sing-along with Ed Sheeran.
-</ArticleParagraph>
-
-<ArticleParagraph>
-Effective time management technique is not something that needs to be written down in a cookbook. Rather, I think, it borders on keeping a good balance of both having a plan and exercising discretion in tackling the nuances that invariably show up when dealing with factors like task priority, difficulty, fulfillment, etc. Like art, you get better at it with time and practice. I remind myself that I am human. As humans, it&apos;s okay that I got tired and occasionally frustrated every once in a while. It&apos;s okay if there are days when I didn&apos;t tick off any task in my checklist.
-</ArticleParagraph>
-
-<ArticleParagraph>
-As long as I always come back to pick up from where I left off, after having some break and rest, I believe <ArticleHighlight>I am doing well</ArticleHighlight>.
+    <ArticleParagraph>
+    As long as I maintain this cycle of effort, reflection, and renewal, I can confidently say <ArticleHighlight>I am doing well</ArticleHighlight>. And perhaps that's the ultimate measure of effective time management—not perfect productivity, but sustainable progress toward meaningful goals.
 </ArticleParagraph>

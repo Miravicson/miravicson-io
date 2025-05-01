@@ -56,7 +56,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const { frontMatter, content } = getFrontMatterAndContent(slug);
-  console.log(frontMatter, content)
   const mdxSource = await serialize(content);
 
   return {

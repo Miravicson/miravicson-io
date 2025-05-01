@@ -1,6 +1,6 @@
 import cn from 'classnames';
+import Image from 'next/image';
 import Link from 'next/link';
-import ProgressiveImage from 'react-progressive-image';
 
 interface Props {
   title: string;
@@ -17,21 +17,13 @@ export default function BlogCoverImage({
   height,
   width,
 }: Props) {
+
   const image = (
-    <ProgressiveImage src={src} placeholder={src}>
-      {(src, loading) => (
-        <img
-          src={src}
-          alt={`Cover Image for ${title}`}
-          className={cn('shadow-sm', {
-            'hover:shadow-md transition-shadow duration-200': slug,
-          })}
-          width={width}
-          height={height}
-        />
-      )}
-    </ProgressiveImage>
-  );
+    <Image src={src} alt={`Cover Image for ${title}`} className={cn('shadow-sm', {
+      'hover:shadow-md transition-shadow duration-200': slug,
+    })}  width={width}
+    height={height}  />
+  )
   return (
     <div className="sm:mx-0">
       {slug ? (
