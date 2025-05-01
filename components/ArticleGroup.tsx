@@ -82,12 +82,24 @@ function ArticleGroup({ articles }: Props): ReactElement {
     new Date(article.date).getFullYear()
   );
 
-  let groupedArticlesByYear: [string, [Omit<IArticle, "body">, ...Omit<IArticle, "body">[]]][] = orderBy(
+  // let groupedArticlesByYear: [string, [Omit<IArticle, "body">, ...Omit<IArticle, "body">[]]][] = orderBy(
+  //   Object.entries(groupedArticles),
+  //   [(articleEntry) => articleEntry[0]],
+  //   ['desc']
+  // );
+
+
+  const orderedEntries = orderBy(
     Object.entries(groupedArticles),
     [(articleEntry) => articleEntry[0]],
     ['desc']
   );
-
+  
+  // Convert only if we're sure of the structure
+  let groupedArticlesByYear: [string, [Omit<IArticle, "body">, ...Omit<IArticle, "body">[]]][] = 
+    orderedEntries
+      .filter(entry => entry[1].length > 0)
+      .map(([year, articles]) => [year, articles as [Omit<IArticle, "body">, ...Omit<IArticle, "body">[]]]);
   return (
     <section className={`space-y-4`}>
       {groupedArticlesByYear.map((articleByYear) => {
