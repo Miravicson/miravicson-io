@@ -11,7 +11,7 @@ import {
   Git,
   GoogleCloud,
   Aws,
-} from '@styled-icons/boxicons-logos/';
+} from 'styled-icons/boxicons-logos/';
 import {
   Nestjs,
   Mongodb,
@@ -36,7 +36,7 @@ import {
   Mocha,
   Java,
   Springboot,
-} from '@styled-icons/simple-icons';
+} from 'styled-icons/simple-icons';
 
 export const techStack = [
   {
