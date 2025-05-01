@@ -8,11 +8,11 @@ export default function Hero() {
       <div className="flex flex-col items-center mx-auto ssm:items-start ssm:flex-row md:justify-between">
         <div className="order-last text-center ssm:text-left ssm:order-first lg:w-4/6 bmd:text-left">
           <h1 className={`font-bold leading-[1] text-[1em] m-0`}>
-            Writer.
+            Full.
             <br />
-            Developer.
+            Stack.
             <br />
-            <span className={`whitespace-nowrap`}>AI Engineer.</span>
+            <span className={`whitespace-nowrap`}>Engineer.</span>
           </h1>
         </div>
         {/* Image container */}
