@@ -3,9 +3,9 @@ const userData = {
   name: 'Victor Ughonu',
   designation: 'Full Stack Engineer',
   avatarUrl:
-    'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu-big.jpg',
+    'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1750490638/miravicson.com/victor-ughonu-big.jpg',
   avatarUrlSmall:
-    'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu.jpg',
+    'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1750491196/miravicson.com/victor-ughonu.jpg',
   email: 'victorughonu@gmail.com',
   phone: '+2348165660498',
   address: 'Lagos, Nigeria',
@@ -175,7 +175,7 @@ const userData = {
   },
   SEO: {
     summary: {
-      title: 'Victor Ughonu - Developer, AI Engineer, Programmer, Writer',
+      title: 'Victor Ughonu - Fullstack Software Engineer',
       description: `I've been developing websites for 6 years straight. Get in touch with me to know more.`,
       image:
         'https://res.cloudinary.com/dv1l0kz3g/image/upload/v1634630941/miravicson.com/victor-ughonu.jpg',
