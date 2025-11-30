@@ -1,5 +1,5 @@
-import React, { ReactElement } from "react";
 import PlusIcon from "@/components/icons/PlusIcon";
+import { ReactElement } from "react";
 import Button, { ButtonProps } from "./buttons";
 
 type ViewAllButtonProps = Omit<ButtonProps, "icon">;
