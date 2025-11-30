@@ -1,11 +1,10 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 interface Props {
   width?: number;
   height?: number;
   className?: string;
 }
-
 
 function LinkedInLogo({
   width = 16,

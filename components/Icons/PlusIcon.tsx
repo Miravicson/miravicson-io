@@ -1,8 +1,6 @@
-import * as React from 'react';
-
-function PlusIcon(props) {
+function PlusIcon() {
   return (
-    <svg width={27} height={26} {...props}>
+    <svg width={27} height={26}>
       <g
         transform="translate(1.5 1)"
         stroke="currentColor"

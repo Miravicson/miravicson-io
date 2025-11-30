@@ -1,28 +1,30 @@
-import userData from '@constants/data';
-import Link from 'next/link';
-import InstagramLogo from './Icons/InstagramLogo';
-import LinkedInLogo from './Icons/LinkedInLogo';
-import TwitterLogo from './Icons/TwitterLogo';
-import NavLink from './NavLink';
-import ThemeToggleButton from './ThemeToggleButton';
+"use client";
+
+import Link from "next/link";
+import InstagramLogo from "@/components/icons/InstagramLogo";
+import LinkedInLogo from "@/components/icons/LinkedInLogo";
+import TwitterLogo from "@/components/icons/TwitterLogo";
+import NavLink from "./navlink";
+import ThemeToggleButton from "./toggle-theme-button";
+import userData from "@/lib/data/data";
 
 const navBarLinks = [
-  { name: 'Articles', link: '/articles' },
+  { name: "Articles", link: "/articles" },
   {
-    name: 'Work',
-    link: '/work',
+    name: "Work",
+    link: "/work",
   },
   {
-    name: 'Projects',
-    link: '/projects',
+    name: "Projects",
+    link: "/projects",
   },
   {
-    name: 'About',
-    link: '/about',
+    name: "About",
+    link: "/about",
   },
   {
-    name: 'Resume',
-    link: '/resume',
+    name: "Resume",
+    link: "/resume",
   },
 ];
 export default function Navbar() {
@@ -31,14 +33,12 @@ export default function Navbar() {
       <div className="flex items-center justify-between md:flex-row">
         <div className="flex flex-col">
           <Link href="/">
- 
-              <h1 className="text-base md:text-[1.125rem] md:leading-[1.3] font-medium leading-[1.3]">
-                {userData.name}
-              </h1>
-              <p className="text-base font-light leading-[1.3] md:text-[1.125rem] md:leading-[1.3]">
-                {userData.designation}
-              </p>
-
+            <h1 className="text-base md:text-[1.125rem] md:leading-[1.3] font-medium leading-[1.3]">
+              {userData.name}
+            </h1>
+            <p className="text-base font-light leading-[1.3] md:text-[1.125rem] md:leading-[1.3]">
+              {userData.designation}
+            </p>
           </Link>
         </div>
         {/* Desktop Nav links */}

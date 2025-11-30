@@ -1,10 +1,6 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from "react";
 
-interface Props {
-  
-}
-
-function DownArrow({}: Props): ReactElement {
+function DownArrow(): ReactElement {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,4 +18,4 @@ function DownArrow({}: Props): ReactElement {
   );
 }
 
-export default DownArrow
+export default DownArrow;

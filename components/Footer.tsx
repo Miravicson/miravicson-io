@@ -1,17 +1,15 @@
-import React from 'react';
-import userData from '@constants/data';
+import userData from "@/lib/data/data";
 
 export default function Footer({ className }: { className?: string }) {
   return (
     <div className={className}>
       <div className="max-w-6xl px-4 py-10 mx-auto md:py-20">
-        <div className="h-0.5 w-full bg-white dark:bg-gray-700"></div>
+        <div className="h-0.5 w-full bg-gray-700 dark:bg-gray-300"></div>
         <div className="flex flex-col justify-between mt-8 space-y-4 md:space-y-0 md:flex-row md:items-center">
           <div>
             <p>&copy; Victor Ughonu. All Rights Reserved.</p>
           </div>
           <div>
-            {/* Support me by keeping this in the footer, please. :) */}
             <div>
               Developed by
               <div className="inline-block transition duration-300 transform hover:scale-110 hover:-rotate-3">

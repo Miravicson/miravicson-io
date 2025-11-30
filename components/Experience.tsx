@@ -1,8 +1,8 @@
-import userData from '@constants/data';
-import React from 'react';
-import SubDuedHeader from './SubDuedHeader';
+import userData from "@/lib/data/data";
+import React from "react";
+import SubDuedHeader from "./subdued-header";
 
-export default function Work() {
+export default function Experience() {
   return <ExperienceCardList />;
 }
 
@@ -32,7 +32,21 @@ function ExperienceCardList() {
   );
 }
 
-const ExperienceCard = ({ title, desc, year, company, companyLink }) => {
+type ExperienceCardProps = {
+  title: string;
+  desc: string;
+  year: string;
+  company: string;
+  companyLink: string;
+};
+
+const ExperienceCard = ({
+  title,
+  desc,
+  year,
+  company,
+  companyLink,
+}: ExperienceCardProps) => {
   return (
     <React.Fragment>
       <div className="relative z-10 p-4 mx-4 bg-white border rounded-md shadow-xl experience-card dark:bg-gray-800">

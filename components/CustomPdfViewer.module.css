@@ -1,9 +1,0 @@
-.Page {
-  @apply w-full flex justify-center;
-}
-
-.Page canvas {
-  width: 100% !important;
-  height: unset !important;
-  /* border: 1px solid red; */
-}

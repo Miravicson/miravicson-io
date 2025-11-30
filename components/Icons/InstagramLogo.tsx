@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 interface Props {
   width?: number;
@@ -6,7 +6,11 @@ interface Props {
   className?: string;
 }
 
-function InstagramLogo({width = 16, height = 16, className}: Props): ReactElement {
+function InstagramLogo({
+  width = 16,
+  height = 16,
+  className,
+}: Props): ReactElement {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

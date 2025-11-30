@@ -1,10 +1,8 @@
-import React from 'react';
-import userData from '@constants/data';
-import { defaultMeta, useSetMeta } from './SEOProvider';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import userData from "@/lib/data/data";
 
 export default function Projects() {
-  useSetMeta(defaultMeta);
   return (
     <section className={`min-h-[calc(95vh-364px)]`}>
       <div className="grid max-w-6xl grid-cols-1 gap-8 pb-40 mx-auto md:grid-cols-2">
@@ -21,8 +19,13 @@ export default function Projects() {
     </section>
   );
 }
-
-const ProjectCard = ({ title, link, imgUrl, number }) => {
+type ProjectCardProps = {
+  title: string;
+  link: string;
+  imgUrl: string;
+  number: string;
+};
+const ProjectCard = ({ title, link, imgUrl, number }: ProjectCardProps) => {
   return (
     <a href={link} className="block w-full shadow-2xl">
       <div className="relative overflow-hidden">
@@ -39,7 +42,7 @@ const ProjectCard = ({ title, link, imgUrl, number }) => {
           {title}
         </h1>
         <h1 className="absolute p-2 text-xl font-bold opacity-50 rounded-xl bottom-10 left-10 text-gray-50 bg-d-top-background-color">
-          {number.length === 1 ? '0' + number : number}
+          {number.length === 1 ? "0" + number : number}
         </h1>
       </div>
     </a>

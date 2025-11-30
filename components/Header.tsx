@@ -1,11 +1,13 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 interface Props {
-  children: React.ReactNode;
   className?: string;
 }
 
-function Header({ children, className }: Props): ReactElement {
+function Header({
+  children,
+  className,
+}: React.PropsWithChildren<Props>): ReactElement {
   return (
     <header className={`header-background ${className}`}>{children}</header>
   );

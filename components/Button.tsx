@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
-import Link from 'next/link';
+import React, { ReactElement } from "react";
+import Link from "next/link";
 
 export interface ButtonProps {
-  as?: 'link' | 'button';
+  as?: "link" | "button";
   className?: string;
   onClick?(): void;
   link?: string;
@@ -23,9 +23,8 @@ function LinkSubComponent({
 }) {
   return (
     <Link href={link} className={`button ${className}`} role="button">
-
-        <div className={`button-icon`}>{icon}</div>
-        <div className={`button-text`}>{children}</div>
+      <div className={`button-icon`}>{icon}</div>
+      <div className={`button-text`}>{children}</div>
     </Link>
   );
 }
@@ -50,22 +49,26 @@ function ButtonSubComponent({
 }
 
 function Button({
-  as = 'button',
+  as = "button",
   className,
   onClick,
   link,
   icon,
   children,
 }: ButtonProps): ReactElement {
-  if (as === 'link') {
+  if (as === "link") {
     return (
-      <LinkSubComponent link={link} icon={icon} className={className}>
+      <LinkSubComponent link={link as string} icon={icon} className={className}>
         {children}
       </LinkSubComponent>
     );
   }
   return (
-    <ButtonSubComponent onClick={onClick} className={className} icon={icon}>
+    <ButtonSubComponent
+      onClick={onClick as () => void}
+      className={className}
+      icon={icon}
+    >
       {children}
     </ButtonSubComponent>
   );
